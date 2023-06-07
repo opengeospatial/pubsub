@@ -1,0 +1,20 @@
+# PubSub Standard Working Group (SWG)
+
+Welcome to the OGC PubSub SWG GitHub Repo.
+
+The https://portal.ogc.org/index.php?m=projects&a=view&project_id=366&tab=0[PubSub Standards Working Group (SWG)] is working under the auspices of the https://www.ogc.org/[Open Geospatial Consortium].  The purpose of this SWG is to develop Best Practices and potentially Standards for utilizing Publish-Subscribe protocols in OGC Web APIs.
+
+# Draft GeoPose Specifications
+
+To be determined
+
+# Contributing
+The OGC PubSub SWG is the group at OGC responsible for the stewardship of these publications. As of our publication to this repo, the SWG will do as much work in public as possible.
+
+If you have input, comments or feedback for the SWG's consideration, please begin by reviewing the https://github.com/opengeospatial/pubsub/issues[open issues] tab. If there is already an issue with your question, concern or input, please respond or discuss in the issue. If your input, feedback or question is new (not captured in a prior issue), please open a new issue.
+
+The PubSub SWG will promptly review open issues and address or reply to new issues in a timely manner.
+
+If necessary, make a branch from the "working" branch of this repo. Make any changes to your own branch of "working" Pull Requests from contributors may only be made on the "working" branch. Please note that by sending a Pull Request or Commit to this GitHub repository, you are agreeing to the terms in the [OGC PubSub SWG Observer Agreement].
+
+The contributor understands that any contributions, if accepted by the OGC PubSub SWG, shall be incorporated into a final OGC document and that all copyright and intellectual property shall be vested to the OGC. See http://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/LICENSE[Copy of OGC License Language].
