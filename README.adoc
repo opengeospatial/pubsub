@@ -4,7 +4,7 @@ Welcome to the OGC PubSub SWG GitHub Repo.
 
 The https://portal.ogc.org/index.php?m=projects&a=view&project_id=366&tab=0[PubSub Standards Working Group (SWG)] is working under the auspices of the https://www.ogc.org/[Open Geospatial Consortium].  The purpose of this SWG is to develop Best Practices and potentially Standards for utilizing Publish-Subscribe protocols in OGC Web APIs.
 
-# Draft GeoPose Specifications
+# Draft PubSub Specifications
 
 To be determined
 
