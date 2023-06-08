@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="presentation" version="2.0.6">
+<bibdata type="standard">
+<title language="en" format="text/plain">OGC PubSub SWG</title>
+<contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+</organization></contributor><language current="true">en</language><script current="true">Latn</script><status><stage language="">approved</stage><stage language="en">Approved</stage></status><copyright><from>2023</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+</organization></owner></copyright><ext><doctype language="">standard</doctype><subdoctype>implementation</subdoctype></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Table of contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the following additional terms and definitions apply.</p>
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the terms and definitions given in % additionally apply.</p>
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the terms and definitions given in % and the following additionally apply.</p>
+</localized-string><localized-string key="term_defined_in" language="en">(%)</localized-string><localized-string key="binary_and" language="en">%1 and %2</localized-string><localized-string key="multiple_and" language="en">%1, and %2</localized-string><localized-string key="binary_or" language="en">%1 or %2</localized-string><localized-string key="multiple_or" language="en">%1, or %2</localized-string><localized-string key="chain_and" language="en">%1 and %2</localized-string><localized-string key="chain_or" language="en">%1 or %2</localized-string><localized-string key="chain_from" language="en">%1 from %2</localized-string><localized-string key="chain_to" language="en">%1 to %2</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="formula" language="en">Formula</localized-string><localized-string key="inequality" language="en">Formula</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">Example</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">SOURCE</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="toc_figures" language="en">List of figures</localized-string><localized-string key="toc_tables" language="en">List of tables</localized-string><localized-string key="toc_recommendations" language="en">List of recommendations</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="subject" language="en">Subject</localized-string><localized-string key="inherits" language="en">Inherits</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="admitted" language="en">ADMITTED</localized-string><localized-string key="submitters" language="en">Submitters</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="security_empty" language="en">No security considerations have been made for this document.</localized-string><localized-string key="stage_dict.draft" language="en">Draft</localized-string><localized-string key="stage_dict.work-item-draft" language="en">Work Item Draft</localized-string><localized-string key="stage_dict.swg-draft" language="en">Candidate SWG Draft</localized-string><localized-string key="stage_dict.oab-review" language="en">Candidate OAB Review Draft</localized-string><localized-string key="stage_dict.public-rfc" language="en">Candidate Public RFC Draft</localized-string><localized-string key="stage_dict.tc-vote" language="en">Candidate TC Vote Draft</localized-string><localized-string key="stage_dict.approved" language="en">Approved</localized-string><localized-string key="stage_dict.published" language="en">Published</localized-string><localized-string key="stage_dict.deprecated" language="en">Deprecated</localized-string><localized-string key="stage_dict.rescinded" language="en">Rescinded</localized-string><localized-string key="stage_dict.retired" language="en">Retired</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings><misc-container><presentation-metadata><name>TOC Heading Levels</name><value>4</value></presentation-metadata><presentation-metadata><name>TOC Heading Levels</name><value>4</value></presentation-metadata><presentation-metadata><name>TOC Heading Levels</name><value>4</value></presentation-metadata></misc-container>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <title depth="1">Copyright notice</title>
+
+      <p align="center" id="_4380411b-aa89-cc2d-d393-9800128f1de1">Copyright
+        © 2023 Open Geospatial Consortium<br/>
+        To obtain additional rights of use, visit
+        <link target="http://www.ogc.org/legal/">http://www.ogc.org/legal/</link></p>
+    </clause>
+    <clause>
+      <title depth="1">Note</title>
+      <p align="left" id="_11e88dba-9912-1a89-a82d-7291bf232191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+      <p align="left" id="_15067213-c07b-cba0-7e18-395ab2e00ab3">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+    </clause>
+  </copyright-statement>
+  <license-statement>
+    <clause>
+      <title depth="1">License Agreement</title>
+
+      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
+        Consortium, (“Licensor”), free of charge and subject to the terms set
+        forth below, to any person obtaining a copy of this Intellectual Property and
+        any associated documentation, to deal in the Intellectual Property without
+        restriction (except as set forth below), including without limitation the
+        rights to implement, use, copy, modify, merge, publish, distribute, and/or
+        sublicense copies of the Intellectual Property, and to permit persons to whom
+        the Intellectual Property is furnished to do so, provided that all copyright notices
+        on the intellectual property are retained intact and that each person to whom
+        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
+
+      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
+        the modified Intellectual Property must include, in addition to the above
+        copyright notice, a notice that the Intellectual Property includes
+        modifications that have not been approved or adopted by LICENSOR.</p>
+
+      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
+        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+        THE INTELLECTUAL PROPERTY IS PROVIDED “AS
+        IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
+        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
+        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
+        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER’S OWN RISK. IN NO
+        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
+        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
+        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
+        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
+
+      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
+        terminate it at any time by destroying the Intellectual Property together with
+        all copies in any form. The license will also terminate if you fail to comply
+        with any term or condition of this Agreement. Except as provided in the
+        following sentence, no such termination of this license shall require the
+        termination of any third party end-user sublicense to the Intellectual Property
+        which is in force as of the date of notice of such termination. In addition,
+        should the Intellectual Property, or the operation of the Intellectual
+        Property, infringe, or in LICENSOR’s sole opinion be
+        likely to infringe, any patent, copyright, trademark or other right of a third
+        party, you agree that LICENSOR, in its sole discretion, may terminate this
+        license without any compensation or liability to you, your licensees or any
+        other party. You agree upon termination of any kind to destroy or cause to be
+        destroyed the Intellectual Property together with all copies in any form,
+        whether held by you or by any third party.</p>
+
+      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
+        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
+        Property shall not be used in advertising or otherwise to promote the sale, use
+        or other dealings in this Intellectual Property without prior written
+        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
+        all times be the sole entity that may authorize you or any third party to use
+        certification marks, trademarks or other special designations to indicate
+        compliance with any LICENSOR standards or specifications.
+        This Agreement is
+        governed by the laws of the Commonwealth of Massachusetts. The application to
+        this Agreement of the United Nations Convention on Contracts for the
+        International Sale of Goods is hereby expressly excluded. In the event any
+        provision of this Agreement shall be deemed unenforceable, void or invalid, such
+        provision shall be modified so as to make it valid and enforceable, and as so
+        modified the entire Agreement shall remain in full force and effect. No
+        decision, action or inaction by LICENSOR shall be construed to be a waiver of
+        any rights or remedies available to it.</p>
+
+      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    </clause>
+  </license-statement>
+
+  <legal-statement>
+    
+    
+    <clause>
+      <title depth="1">Notice</title>
+      <p id="_a156d1c4-313c-340a-8480-366345e3e0d2">This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+      </p>
+    </clause>
+    
+
+
+    
+
+  </legal-statement>
+
+
+
+
+  <feedback-statement>
+    
+    <clause id="boilerplate-standard-feedback">
+      <p id="_bbc1a653-f270-135d-9455-af930feb3587">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <link target="http://portal.opengeospatial.org/public_ogc/change_request.php">http://portal.opengeospatial.org/public_ogc/change_request.php</link></p>
+    </clause>
+    
+  </feedback-statement>
+</boilerplate>
+<preface><foreword id="_f21eca79-de7f-36a4-f6c3-4c754a70d604" obligation="informative" displayorder="1">
+<title depth="1">I.<tab/>Preface</title>
+<pagebreak/>
+<table id="_61a193b7-4834-3b53-c12f-4cd4bf031725"><name>Table 1</name><tbody><tr><td valign="middle" align="right"/></tr><tr><td valign="middle" align="right"><strong>Open Geospatial Consortium</strong></td>
+</tr><tr><td valign="middle" align="right">Submission Date: 2023-06-08</td>
+</tr><tr><td valign="middle" align="right">Approval Date:   &#x3c;yyyy-mm-dd&#x3e;</td>
+</tr><tr><td valign="middle" align="right">Internal reference number of this OGC® document:    10-182r4</td>
+</tr><tr><td valign="middle" align="right">Category: OGC® Standards Working Group Charter</td>
+</tr><tr><td valign="middle" align="right">Authors:   Chris Little</td>
+</tr></tbody>
+</table>
+
+<table id="_bc09eaca-5938-9f5f-9c6f-1620725a10f1"><name>Table 2</name><tbody><tr><td valign="middle" align="center"><strong>OGC PubSub SWG</strong></td>
+</tr></tbody>
+</table>
+
+<table id="_a71936af-a82b-5f0e-c573-c72320f00f64"><name>Table 3</name><tbody><tr><td valign="middle" align="center"><strong>Copyright notice</strong></td>
+</tr><tr><td valign="middle" align="center">Copyright © 2023 Open Geospatial Consortium</td>
+</tr><tr><td valign="middle" align="center">To obtain additional rights of use, visit <link target="http://www.opengeospatial.org/legal/"/></td>
+</tr></tbody>
+</table>
+
+<pagebreak/>
+<p id="_6f24d576-3ce6-219e-09cc-5f8ba330b553">To: OGC members &amp; interested parties</p>
+
+<p id="_666c6c51-1488-bb5b-a2b7-acb4fe61dd0d">A new OGC Standards Working Group is being formed. The OGC members listed below have proposed the OGC PubSub SWG.  The SWG proposal provided in this document meets the requirements of the OGC Technical Committee (TC) Policies and Procedures.</p>
+
+<p id="_121e33b9-9e86-607d-052a-fb89f9538c4a">The SWG name, statement of purpose, scope, list of deliverables, audience, and language specified in the proposal will constitute the SWG’s official charter. Technical discussions may occur no sooner than the SWG’s first meeting.</p>
+
+<p id="_57a48208-47ad-340e-2151-121f5f9fe58a">This SWG will operate under the OGC IPR Policy. The eligibility requirements for becoming a participant in the SWG at the first meeting (see details below) are that:</p>
+
+<ul id="_a71fd76f-de9b-47c9-0450-1f50c0a60f5e"><li><p id="_3d617442-3993-fc48-32b8-ab361183520e">You must be an employee of an OGC member organization or an individual member of OGC;</p>
+</li>
+<li><p id="_b29cede5-0202-5faa-1556-1eb7fcf1d001">The OGC member must have signed the OGC Membership agreement;</p>
+</li>
+<li><p id="_3b72ad34-fc5b-56e7-b314-f449087e8da3">You must notify the SWG chair of your intent to participate to the first meeting. Members may do so by logging onto the OGC Portal and navigating to the Observer page and clicking on the link for the SWG they wish to join and;</p>
+</li>
+<li><p id="_8dc55e47-05bb-a96f-2d44-83fb25c2f9ec">You must attend meetings of the SWG. The first meeting of this SWG is at the time and date fixed below. Attendance may be by teleconference.</p>
+</li>
+</ul>
+
+<p id="_f451fc25-e817-81d8-374b-fdc48ec584b3">Of course, participants also may join the SWG at any time. The OGC and the SWG welcomes all interested parties.</p>
+
+<p id="_194d3d1e-108b-e434-6c3c-f21c6603aba2">Non-OGC members who wish to participate may contact us about joining the OGC. In addition, the public may access some of the resources maintained for each SWG: the SWG public description, the SWG Charter, Change Requests, and public comments, which will be linked from the SWG’s page.</p>
+
+<p id="_30deebfc-cbb9-78b8-e516-2d3a8fe96204">Please feel free to forward this announcement to any other appropriate lists. The OGC is an open standards organization; we encourage your feedback.</p>
+</foreword><clause type="security" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45" obligation="informative" displayorder="2"><title depth="1">II.<tab/>Security considerations</title><p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause></preface><sections>
+<clause id="_purpose_of_the_standards_working_group" obligation="normative" displayorder="4">
+<title depth="1">2.<tab/>Purpose of the Standards Working Group</title>
+<p id="_3c56af6e-dbd2-8971-a9e2-1b565632ba1d">The purpose of the OGC PubSub SWG is to define an OGC Implementation Standard that enables publish/subscribe functionality for all OGC Web Services in a well-defined manner.</p>
+</clause>
+
+<clause id="_business_value_proposition" obligation="normative" displayorder="5">
+<title depth="1">3.<tab/>Business value proposition</title>
+</clause>
+
+<clause id="_scope_of_work" obligation="normative" displayorder="6">
+<title depth="1">4.<tab/>Scope of work</title>
+<p id="_9a8b60da-d40a-6e62-3789-ab21cc363417">The SWG shall review existing material, e.g. in form of OGC Engineering Reports and Standards (both OGC and external), to produce a version 1.0 implementation standard that clearly defines how to enable publish/subscribe functionality for OGC Web Services in a common way. If applicable, this standard may be a component of the OWS Common suite of standards. The items that need to be addressed by the SWG include:</p>
+
+<ol id="_0d086ab8-98f1-d610-61d2-335a3ea4388a" type="arabic"><li><p id="_8bcc46ad-e653-d60a-9688-ab1e60d1a132">Write a core document that clearly defines the requirements for enabling publish/subscribe functionality.</p>
+</li>
+<li><p id="_321c2a27-b322-3c44-62c1-e50bcd1d705b">Write extension documents that define how to realize the core publish/subscribe functionality for a specific service binding (e.g. SOAP, POX, RESTful) – for the bindings the SWG decides to support in the initial version of the standard.</p>
+</li>
+<li><p id="_c5122dec-16db-6165-7bd8-98bb06b40267">Develop examples and – if necessary to enable core functionality – conceptual models and their XML Schema implementation (e.g. for notification metadata).</p>
+</li>
+<li><p id="_4940f67c-bcd9-98dc-3c0f-06a92423e8e4">Address any other technical and/or editorial issues that arise during the review period.</p>
+</li>
+</ol>
+
+<p id="_81a85154-45e0-66b5-73e3-525e216c0885">Only those functional requirements and comments submitted through the formal process as identified in the Policy and Procedures shall be addressed. Items suggested through emails, vocal discussions, etc. will be outside of the scope of this SWG unless the SWG decides to include them.</p>
+
+<clause id="_statement_of_relationship_of_planned_work_to_the_current_ogc_standards_baseline" obligation="normative">
+<title depth="2">4.1.<tab/>Statement of relationship of planned work to the current OGC Standards baseline</title>
+</clause>
+
+<clause id="_what_is_out_of_scope" obligation="normative">
+<title depth="2">4.2.<tab/>What is out of scope?</title>
+<p id="_5de3790b-f3ab-9425-b690-5df35f6d9fc7">The scope of the OGC PubSub SWG is confined to enabling basic publish/subscribe functionality for existing and future OGC Web Services. New filtering techniques will not be addressed, but adaptation of existing filtering mechanisms may be included. Advanced concepts such as pubsub security and Complex Event Processing are out of scope. Any other requirement or functionality the SWG decides to be not contributing to core publish/subscribe functionality is also out of scope.</p>
+
+<p id="_b394dfc5-6e57-0506-6231-e29eeb9d58d2">Advanced concepts and functionality can be worked out in the future – once the work that is in scope for the SWG has been delivered.</p>
+</clause>
+
+<clause id="_specific_existing_work_used_as_starting_point" obligation="normative">
+<title depth="2">4.3.<tab/>Specific existing work used as starting point</title>
+<p id="_8a64f3e2-3782-be68-287e-734e67b9b363">The starting point for this implementation standard shall be OGC 09-032 and OGC 10-060r1.</p>
+</clause>
+
+<clause id="_is_this_a_persistent_swg" obligation="normative">
+<title depth="2">4.4.<tab/>Is this a persistent SWG</title>
+<p id="_8f843ecd-0753-a5fa-f66d-38da78640f1f">[x] YES</p>
+
+<p id="_4d03a071-2a14-5c03-95e0-dd31edbe6556">[ ] NO</p>
+</clause>
+
+<clause id="_when_can_the_swg_be_inactivated" obligation="normative">
+<title depth="2">4.5.<tab/>When can the SWG be inactivated</title>
+<p id="_7aeb6350-f4b3-0b9f-fc10-0e489cf71bb6">The OGC PubSub SWG shall be dissolved after the following milestones have been achieved:</p>
+
+<ul id="_04fb5862-d0d2-081c-66c8-2f4d9d07ff5f"><li><p id="_18d90bd7-54a1-db5d-763a-5bad46086de2">The SWG has reviewed input provided by the OGC and perhaps other communities.</p>
+</li>
+<li><p id="_67e67d5a-09d2-f935-661e-b949dea4762a">The SWG produced the candidate standards listed below.</p>
+</li>
+<li><p id="_5740c756-5196-3f73-c9a5-3bb4ab21b9ea">SWG membership approves a recommendation to submit the documents to the TC for consideration as OGC Adopted Standards.</p>
+</li>
+<li><p id="_740603a5-fc36-97ae-89c5-cb789b187d6e">The candidate standards have been approved by the OGC Technical and Planning Committees as OGC Adopted Standards.</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_description_of_deliverables" obligation="normative" displayorder="7">
+<title depth="1">5.<tab/>Description of deliverables</title>
+<clause id="_initial_deliverables" obligation="normative">
+<title depth="2">5.1.<tab/>Initial deliverables</title>
+<p id="_280f7d4e-c2eb-f1d7-21d8-13e01ed45056">There shall be at least two deliverables:</p>
+
+<ol id="_4bf06039-3ca4-560b-465e-48089d4aebab" type="arabic"><li><p id="_48966dc2-1987-669b-59e4-883a970c2a24">A document describing the core requirements regarding the support of publish-subscribe functionality in OGC Web Services.</p>
+</li>
+<li><p id="_8711aead-1794-51a4-1b20-2c97a3486024">A document describing how to implement these core requirements for each of the bindings the SWG decides to support such as SOAP. At least one such document will be produced by the SWG.</p>
+</li>
+</ol>
+
+<p id="_53e6a3e7-b5a1-6f3e-ba64-08fd4c46a864">The preliminary schedule of the SWG is as follows:</p>
+
+<ul id="_8d4c7adb-3b69-2689-7da9-7a8df343c626"><li><p id="_1868a7fe-bc6b-a32b-0611-554a1190278e">start date: 10th of November 2010</p>
+</li>
+<li><p id="_1e3afc19-597e-d4db-5de2-c4e5eef605cc">release of the candidate standard for public review: 21st of March 2011</p>
+</li>
+<li><p id="_df961934-c469-2b6b-3957-bfbe8a1b13f6">consolidation of comments: 29th of April 2011</p>
+</li>
+<li><p id="_2e3061b0-2869-a49f-f3e5-de70a2d1867d">recommendation to the Membership: 11th of July 2011</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_additional_swg_tasks" obligation="normative">
+<title depth="2">5.2.<tab/>Additional SWG tasks</title>
+</clause>
+</clause>
+
+<clause id="_ipr_policy_for_this_swg" obligation="normative" displayorder="8">
+<title depth="1">6.<tab/>IPR Policy for this SWG</title>
+<p id="_73d80d91-e846-7282-d004-254caa13f2aa">[x] RAND-Royalty Free</p>
+
+<p id="_dd3ca517-fd60-ca7f-5e4e-34d81f1b770b">[ ] RAND for fee</p>
+</clause>
+
+<clause id="_anticipated_audience_participants" obligation="normative" displayorder="9">
+<title depth="1">7.<tab/>Anticipated audience / participants</title>
+<p id="_1740127c-1b85-e7f9-ed69-670b8429676e">Any organization that has a requirement for enabling clients to subscribe to data that is published by an OGC Web Service and of interest to the client and to have the service notify the client when such data is available. Also, organizations that want to enable Event Architecture as well as Event Processing functionality in their service environment.</p>
+
+<p id="_1eeb5685-35df-b0b2-735c-88bb3faf7663">In general, all geospatial service providers / end users that have a need to publish/receive notifications about events of interest as soon as they are detected.</p>
+</clause>
+
+<clause id="_domain_working_group_endorsement" obligation="normative" displayorder="10">
+<title depth="1">8.<tab/>Domain Working Group endorsement</title>
+</clause>
+
+<clause id="_other_informative_information_about_the_work_of_this_swg" obligation="normative" displayorder="11">
+<title depth="1">9.<tab/>Other informative information about the work of this SWG</title>
+<clause id="_collaboration" obligation="normative">
+<title depth="2">9.1.<tab/>Collaboration</title>
+</clause>
+
+<clause id="_similar_or_applicable_standards_work_ogc_and_elsewhere" obligation="normative">
+<title depth="2">9.2.<tab/>Similar or applicable standards work (OGC and elsewhere)</title>
+<p id="_92533fc1-50a4-8c21-b235-66f558ad9891">The following standards and projects may be relevant to the SWG’s planned work, although none currently provide all the functionality anticipated by this committee’s deliverables:</p>
+
+<ul id="_1481eb15-db63-8805-ecc4-7e90faf85ca6"><li><p id="_d66c629b-1431-09c6-f90e-1e22153c619f">OGC 06-121r3, OpenGIS® Web Services Common Standard</p>
+</li>
+<li><p id="_db2840cd-e322-031a-0300-598217caf62c">IETF, Request for Comments (RFC) 4287, The Atom Syndication Format (“Atom 1.0”), December 2005, <link target="http://www.ietf.org/rfc/rfc4287.txt"/></p>
+</li>
+<li><p id="_b8efadea-8351-1abd-3af1-045c58ed11bf">IETF, Request for Comments (RFC) 3920, Extensible Messaging and Presence Protocol (XMPP): Core, <link target="http://tools.ietf.org/html/rfc3920"/></p>
+</li>
+<li><p id="_de2f590c-5f4c-5afb-fcd9-2ef545b049eb">XML Base, XML Base (Second Addition), W3C Recommendation 28 January 2009, <link target="http://www.w3.org/TR/xmlbase/"/></p>
+</li>
+<li><p id="_d7bfcd9c-65f3-88db-8e69-6679000c0121">OGC 09-001, SWE Service Model Standard</p>
+</li>
+<li><p id="_836914ea-f484-5f39-c799-db7481d50e0f">OGC 06-028r3, Sensor Alert Service Best Practices</p>
+</li>
+<li><p id="_5087ce37-5dc7-86e5-ef85-409d190b4046">OGC 09-000, Sensor Planning Service 2.0</p>
+</li>
+<li><p id="_80d9325c-9c03-d83a-e461-a22b9df2e82b">OGC 06-095, Web Notification Service Best Practices</p>
+</li>
+<li><p id="_4a8ba4d4-67f9-970a-f10a-d82745658fba">OGC 08-133, Sensor Event Service Discussion Paper</p>
+</li>
+<li><p id="_eb007965-4755-e593-1324-8848e117a6d1">OGC 08-132, Event Pattern Markup Language Discussion Paper</p>
+</li>
+<li><p id="_45d05a91-9c45-4539-f7d3-678a6dccf9f1">OGC 09-032, OWS-6 SWE Event Architecture Engineering Report</p>
+</li>
+<li><p id="_8499b106-5bf0-3cf4-be48-7b391e09d3ad">OGC 09-050r1, OWS-6 AIM Engineering Report</p>
+</li>
+<li><p id="_5475ef84-fcf0-42ac-8b89-e26e873431cd">OGC 10-061r1, OWS-7 Dynamic Sensor Notification Engineering Report</p>
+</li>
+<li><p id="_40f4a47b-0eb2-4ab6-a209-e3fb3f453c70">OGC 10-073r1, OWS-7 CCSI-SWE Best Practices Engineering Report</p>
+</li>
+<li><p id="_5da27e3a-7ee3-d8a3-6ca3-a6d615c24147">OGC 10-060r1, OWS-7 Event Architecture Engineering Report</p>
+</li>
+<li><p id="_b6f589c3-b89f-f965-bb28-6cd4d1f10594">OGC 10-079r3, OWS-7 Aviation Architecture Engineering Report</p>
+</li>
+<li><p id="_d592145c-5a45-045d-d6f3-22348f50693c">OGC 10-069r2, OWS-7 Geosynchronization service</p>
+</li>
+<li><p id="_07506885-7d78-d055-8260-affb3edb2a7d">OASIS WS-Notification v1.3, <link target="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsn"/></p>
+</li>
+<li><p id="_b51fb8ce-09ed-c5f9-6ce5-a6311fc3ed48">W3C Member Submission 20060315, Web Services Eventing Submission (WS-Eventing), <link target="http://www.w3.org/Submission/2006/SUBM-WS-Eventing-20060315"/></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_details_of_first_meeting" obligation="normative">
+<title depth="2">9.3.<tab/>Details of first meeting</title>
+<p id="_2212b74f-27d8-19c0-988c-8983f1d3b122">The first meeting of the committee will be held by telephone conference call at — PM CET, Nov 10th 2010 (exact time to be announced). Call-in information will be provided to the SWG’s e-mail list and on the portal calendar in advance of the meeting.</p>
+</clause>
+
+<clause id="_projected_on_going_meeting_schedule" obligation="normative">
+<title depth="2">9.4.<tab/>Projected on-going meeting schedule</title>
+<p id="_de433642-5fff-0660-c7b6-193697da1c03">The work of the committee will be carried out primarily by email and conference calls, possibly every two weeks, with face-to-face meetings perhaps during each of the OGC TC meetings. In addition, we may have one or more one-week workshops.</p>
+</clause>
+
+<clause id="_supporters_of_this_charter" obligation="normative">
+<title depth="2">9.5.<tab/>Supporters of this Charter</title>
+<p id="_7d2b6cff-abcc-fffb-479b-c197fe9b2d37">The following people support this proposal and are committed to the Charter and projected meeting schedule. These members are known as SWG Founding or Charter members. The charter members agree to the SoW and IPR terms as defined in this charter. The charter members have voting rights beginning the day the SWG is officially formed. Charter Members are shown on the public SWG page. Extend the table as necessary.</p>
+
+<table id="_5eee4910-68b5-0864-9a93-dfffa0f296bb"><name>Table 4</name><tbody><tr><td valign="middle" align="left">Name</td>
+<td valign="middle" align="left">Email</td>
+<td valign="middle" align="left">Organization</td>
+</tr><tr><td valign="middle" align="left">Johannes Echterhoff</td>
+<td valign="middle" align="left"><link target="mailto:johannes.echterhoff@igsi.eu"/></td>
+<td valign="middle" align="left">iGSI</td>
+</tr><tr><td valign="middle" align="left">Aaron Braeckel</td>
+<td valign="middle" align="left"><link target="mailto:braeckel@ucar.edu"/></td>
+<td valign="middle" align="left">National Center for Atmospheric Research (NCAR)</td>
+</tr><tr><td valign="middle" align="left">Alex Robin</td>
+<td valign="middle" align="left"><link target="mailto:Alexandre.Robin@spotimage.fr"/></td>
+<td valign="middle" align="left">SpotImage</td>
+</tr><tr><td valign="middle" align="left">Thomas Everding</td>
+<td valign="middle" align="left"><link target="mailto:everdingt@uni-muenster.de"/></td>
+<td valign="middle" align="left">IfGI</td>
+</tr><tr><td valign="middle" align="left">Yves Coene</td>
+<td valign="middle" align="left"><link target="mailto:Yves.Coene@spacebel.be"/></td>
+<td valign="middle" align="left">Spacebel</td>
+</tr><tr><td valign="middle" align="left">Patrick Jacques</td>
+<td valign="middle" align="left"><link target="mailto:Patrick.Jacques@spacebel.be"/></td>
+<td valign="middle" align="left">Spacebel</td>
+</tr><tr><td valign="middle" align="left">Mike Botts</td>
+<td valign="middle" align="left"><link target="mailto:mike.botts@botts-inc.net"/></td>
+<td valign="middle" align="left">Botts Inc</td>
+</tr><tr><td valign="middle" align="left">Frédéric Guillaud</td>
+<td valign="middle" align="left">mailto:Frederic.Guillaud@meteo.fr[<link target="mailto:Frederic.Guillaud@meteo.fr"/></td>
+<td valign="middle" align="left">Météo France</td>
+</tr><tr><td valign="middle" align="left">Pete Trevelyan</td>
+<td valign="middle" align="left"><link target="mailto:peter.trevelyan@metoffice.gov.uk"/></td>
+<td valign="middle" align="left">Met Office UK</td>
+</tr><tr><td valign="middle" align="left">Oliver Newell</td>
+<td valign="middle" align="left"><link target="mailto:olivern@ll.mit.edu"/></td>
+<td valign="middle" align="left">MIT Lincoln Laboratory</td>
+</tr><tr><td valign="middle" align="left">Panagiotis (Peter) A. Vretanos</td>
+<td valign="middle" align="left"><link target="mailto:pvretano@cubewerx.com"/></td>
+<td valign="middle" align="left">CubeWerx Inc.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_conveners" obligation="normative">
+<title depth="2">9.6.<tab/>Conveners</title>
+<p id="_aada750c-bb24-7315-e68e-ec1b36bb0122">Johannes Echterhoff (iGSI)</p>
+</clause>
+
+<clause id="_background" obligation="normative">
+<title depth="2">9.7.<tab/>Background</title>
+<p id="_1d7c39e8-19b5-23d1-dc28-6ef505a700a7">This section is from the 2010 charter and may not get carried over into the 2023 recharter.</p>
+
+<p id="_d5d01f5f-bdc2-4fc4-a65f-b59dd52d0a8e">The Sensor Web Enablement (SWE) initiative definition of the Sensor Alert Service (SAS) specification was the first step in developing an OGC Standard that defines publish/subscribe functionality for all OGC Web Services (OWS). The development of SAS continued until 2007 and resulted in a Best Practices document. The SAS was not released as OGC Standard. One reason for this was that the SAS defined its own publish/subscribe interface. OGC members rightly requested that the SAS should make use of existing standards to enable publish/subscribe.</p>
+
+<p id="_784cc593-1bd3-b9da-be07-d41df334dbce">This request led to the development of the Sensor Event Service (SES) engineering specification. Like the SAS, the SES was designed as a broker between notification producers (e.g. sensors) and notification consumers (e.g. client applications or other services). In contrast to the SAS, the SES used the Web Services Notification (WS-N) standards from OASIS for achieving the publish/subscribe functionality. The SES document was released as an OGC Discussion Paper in 2008. Due to the experience gained with the development of the SES, WS-N was also selected to be used in the SWE Service Model (SWES) for performing publish/subscribe in the SOAP binding. The Sensor Planning Service (SPS) 2.0 depends upon SWES and thus also uses WS-N for enabling publish/subscribe functionality in its SOAP binding.</p>
+
+<p id="_9c645ddd-b794-34ef-b4eb-05ac1661031c">In 2009, in the OWS-6 testbed, the first version of the Event Architecture (EA) was developed. This work built on the experiences in developing the SAS and the SES engineering specifications but the focus for the EA was not on the development of a service specification. The resulting OWS-6 public Engineering Report (09-032) describes an abstract event architecture including the definition of important terms, an application schema for events and roles and interfaces for the abstract architecture – including interfaces for subscribing for and receiving notifications. This abstract architecture was also mapped to multiple use cases and OGC services to show how it could be applied in various OWSs. In addition related problems and technologies are described like common messaging patterns, event processing, acknowledgements of events and canceling of events.</p>
+
+<p id="_e5f5e22b-9dc7-28e2-f84d-e529b2885260">Work on a cross-thread Event Architecture continued in OWS-7. The resulting report (10-060r1) defines the actual publish / subscribe functionality in much more detail.</p>
+
+<p id="_bf08a847-2c6c-193f-d1e7-bc77acaeb249">In the development of the Event Architecture, Web Services Eventing (WS-E) and ATOM were also considered, besides WS-N. WS-E from the W3C has a similar scope as WS-N but differs in some aspects. WS-E is currently proposed as W3C standard but not released as W3C Recommendation yet.</p>
+
+<p id="_0703ab34-1a69-2336-4336-fa3581def864">There are three ATOM internet RFCs. The first is the Atom Syndication Format (ASF) which is an XML based format for the description of lists of related information (feeds). The Atom Publishing Protocol (AtomPub) is used for editing and publishing web resources encoded as ATOM feeds. PubSubHubBub (PSHB) is a protocol that extends ATOM feeds to support push based communication via feeds instead of pulling (requesting) information updates. ATOM feeds have successfully been used in the Geosynchronization work that was performed in OWS-7.</p>
+
+<p id="_7d070f9b-3870-05e3-df08-bdeb355c4e6f">Based upon the experiences made so far regarding the enablement of publish/subscribe in OWS, the OWS PubSub SWG will develop an OGC Standard that supports the requirements regarding PubSub in OWS. Furthermore, this Standard will define in detail how existing Standards that are well used in the IT domain are to be used to enable publish/subscribe functionality in OGC services.</p>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="true" obligation="informative" displayorder="3">
+<title depth="1">1.<tab/>Normative references</title><p id="_7a57430e-eeb6-b3a6-76b7-0eb0912d03a8">There are no normative references in this document.</p>
+</references></bibliography>
+</ogc-standard>
