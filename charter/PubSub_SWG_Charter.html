@@ -538,21 +538,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_purpose_of_the_standards_working_group"><a class="anchor" href="#_purpose_of_the_standards_working_group"></a>1. Purpose of the Standards Working Group</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The purpose of the OGC PubSub SWG is to define an OGC Implementation Standard that enables publish/subscribe functionality for all OGC Web Services in a well-defined manner.</p>
+<p>The purpose of the OGC PubSub SWG is to define an OGC Implementation Standard that enables publish/subscribe functionality for all implemementations of OGC API Standards in a well-defined manner.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_business_value_proposition"><a class="anchor" href="#_business_value_proposition"></a>2. Business value proposition</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>OGC API Standards specify Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection&#8217;s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a timely, efficient and low latency approach for delivery of data updates.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_scope_of_work"><a class="anchor" href="#_scope_of_work"></a>3. Scope of work</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The SWG shall review existing material, e.g. in form of OGC Engineering Reports and Standards (both OGC and external), to produce a version 1.0 implementation standard that clearly defines how to enable publish/subscribe functionality for OGC Web Services in a common way. If applicable, this standard may be a component of the OWS Common suite of standards. The items that need to be addressed by the SWG include:</p>
+<p>The SWG shall review existing material, e.g. in form of OGC Engineering Reports and Standards (both OGC and external), to produce a version 1.0 implementation standard that clearly defines how to enable publish/subscribe functionality for implementations of OGC API Standards in a common way. If applicable, this standard may become a future part of the OGC API - Common standard. The items that need to be addressed by the SWG include:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -560,10 +562,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Write a core document that clearly defines the requirements for enabling publish/subscribe functionality.</p>
 </li>
 <li>
-<p>Write extension documents that define how to realize the core publish/subscribe functionality for a specific service binding (e.g. SOAP, POX, RESTful) – for the bindings the SWG decides to support in the initial version of the standard.</p>
+<p>Write extension documents that define how to realize the core publish/subscribe functionality for a specific service binding (e.g. AsyncAPI, MQTT) – for the bindings the SWG decides to support in the initial version of the standard.</p>
 </li>
 <li>
-<p>Develop examples and – if necessary to enable core functionality – conceptual models and their XML Schema implementation (e.g. for notification metadata).</p>
+<p>Develop examples and – if necessary to enable core functionality – conceptual models and their JSON Schema implementation (e.g. for notification metadata).</p>
 </li>
 <li>
 <p>Address any other technical and/or editorial issues that arise during the review period.</p>
@@ -575,12 +577,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_statement_of_relationship_of_planned_work_to_the_current_ogc_standards_baseline"><a class="anchor" href="#_statement_of_relationship_of_planned_work_to_the_current_ogc_standards_baseline"></a>3.1. Statement of relationship of planned work to the current OGC Standards baseline</h3>
-
+<div class="paragraph">
+<p>This proposed standard is intended to be a major component of the OGC API framework. The proposed standard will take advantage of Web API patterns identified in OGC API standards (e.g., MQTT in OGC SensorThings API) and other ongoing API efforts (e.g. AsyncAPI) to better align with current and emerging IT practices.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_what_is_out_of_scope"><a class="anchor" href="#_what_is_out_of_scope"></a>3.2. What is out of scope?</h3>
 <div class="paragraph">
-<p>The scope of the OGC PubSub SWG is confined to enabling basic publish/subscribe functionality for existing and future OGC Web Services. New filtering techniques will not be addressed, but adaptation of existing filtering mechanisms may be included. Advanced concepts such as pubsub security and Complex Event Processing are out of scope. Any other requirement or functionality the SWG decides to be not contributing to core publish/subscribe functionality is also out of scope.</p>
+<p>The scope of the OGC PubSub SWG is confined to enabling basic publish/subscribe functionality for existing and future OGC APIs. New filtering techniques will not be addressed, but adaptation of existing filtering mechanisms may be included. Advanced concepts such as pubsub security and Complex Event Processing are out of scope. Any other requirement or functionality the SWG decides to be not contributing to core publish/subscribe functionality is also out of scope.</p>
 </div>
 <div class="paragraph">
 <p>Advanced concepts and functionality can be worked out in the future – once the work that is in scope for the SWG has been delivered.</p>
@@ -589,7 +593,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_specific_existing_work_used_as_starting_point"><a class="anchor" href="#_specific_existing_work_used_as_starting_point"></a>3.3. Specific existing work used as starting point</h3>
 <div class="paragraph">
-<p>The starting point for this implementation standard shall be OGC 09-032 and OGC 10-060r1.</p>
+<p>The starting point for this implementation standard shall be the "Discussion Paper for Publish-Subscribe Workflow in OGC
+APIs" (OGC 23-013). This charter also recognizes the prior work done for OGC Web Services (OWS) as specified in the OGC® Publish/Subscribe Interface Standard 1.0 - Core Standard (OGC 13-131r1) and OGC® Publish/Subscribe Interface Standard 1.0 SOAP Protocol Binding Extension (OGC 13-133r1). <strong>Note however that OWS Pub/Sub standards shall not be referenced normatively in the proposed new standard.</strong></p>
 </div>
 </div>
 <div class="sect2">
@@ -618,7 +623,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>SWG membership approves a recommendation to submit the documents to the TC for consideration as OGC Adopted Standards.</p>
 </li>
 <li>
-<p>The candidate standards have been approved by the OGC Technical and Planning Committees as OGC Adopted Standards.</p>
+<p>The candidate standards have been approved by the OGC Technical and Executive Planning Committees as OGC Adopted Standards.</p>
 </li>
 </ul>
 </div>
@@ -636,31 +641,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>A document describing the core requirements regarding the support of publish-subscribe functionality in OGC Web Services.</p>
+<p>A document describing the core requirements regarding the support of publish-subscribe functionality in implementations of OGC API Standards.</p>
 </li>
 <li>
-<p>A document describing how to implement these core requirements for each of the bindings the SWG decides to support such as SOAP. At least one such document will be produced by the SWG.</p>
+<p>A document describing how to implement these core requirements for each of the bindings the SWG decides to support. At least one such document will be produced by the SWG.</p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>The preliminary schedule of the SWG is as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>start date: 10th of November 2010</p>
-</li>
-<li>
-<p>release of the candidate standard for public review: 21st of March 2011</p>
-</li>
-<li>
-<p>consolidation of comments: 29th of April 2011</p>
-</li>
-<li>
-<p>recommendation to the Membership: 11th of July 2011</p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
@@ -684,7 +670,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_anticipated_audience_participants"><a class="anchor" href="#_anticipated_audience_participants"></a>6. Anticipated audience / participants</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Any organization that has a requirement for enabling clients to subscribe to data that is published by an OGC Web Service and of interest to the client and to have the service notify the client when such data is available. Also, organizations that want to enable Event Architecture as well as Event Processing functionality in their service environment.</p>
+<p>Any organization that has a requirement for enabling clients to subscribe to data that is published by an implementation of an OGC API Standard and of interest to the client and to have the API notify the client when such data is available. Also, organizations that want to enable Event Architecture as well as Event Processing functionality in their computing environment.</p>
 </div>
 <div class="paragraph">
 <p>In general, all geospatial service providers / end users that have a need to publish/receive notifications about events of interest as soon as they are detected.</p>
@@ -694,7 +680,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_domain_working_group_endorsement"><a class="anchor" href="#_domain_working_group_endorsement"></a>7. Domain Working Group endorsement</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>The Architecture DWG will review the proof-of-concept at <a href="https://github.com/opengeospatial/pubsub" class="bare">https://github.com/opengeospatial/pubsub</a> and this SWG charter. A statement of endorsement is anticipated at the September 2023 OGC Member Meeting.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -768,23 +756,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>W3C Member Submission 20060315, Web Services Eventing Submission (WS-Eventing), <a href="http://www.w3.org/Submission/2006/SUBM-WS-Eventing-20060315">http://www.w3.org/Submission/2006/SUBM-WS-Eventing-20060315</a></p>
 </li>
+<li>
+<p>OGC® Publish/Subscribe Interface Standard 1.0 - Core, <a href="https://docs.ogc.org/is/13-131r1/13-131r1.html">(OGC 13-131r1)</a></p>
+</li>
+<li>
+<p>OGC® Publish/Subscribe Interface Standard 1.0 SOAP Protocol Binding Extension, <a href="https://docs.ogc.org/is/13-133r1/13-133r1.html">(OGC 13-133r1)</a></p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_details_of_first_meeting"><a class="anchor" href="#_details_of_first_meeting"></a>8.3. Details of first meeting</h3>
-<div class="paragraph">
-<p>The first meeting of the committee will be held by telephone conference call at — PM CET, Nov 10th 2010 (exact time to be announced). Call-in information will be provided to the SWG&#8217;s e-mail list and on the portal calendar in advance of the meeting.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_projected_on_going_meeting_schedule"><a class="anchor" href="#_projected_on_going_meeting_schedule"></a>8.4. Projected on-going meeting schedule</h3>
-<div class="paragraph">
-<p>The work of the committee will be carried out primarily by email and conference calls, possibly every two weeks, with face-to-face meetings perhaps during each of the OGC TC meetings. In addition, we may have one or more one-week workshops.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_supporters_of_this_charter"><a class="anchor" href="#_supporters_of_this_charter"></a>8.5. Supporters of this Charter</h3>
+<h3 id="_supporters_of_this_charter"><a class="anchor" href="#_supporters_of_this_charter"></a>8.3. Supporters of this Charter</h3>
 <div class="paragraph">
 <p>The following people support this proposal and are committed to the Charter and projected meeting schedule. These members are known as SWG Founding or Charter members. The charter members agree to the SoW and IPR terms as defined in this charter. The charter members have voting rights beginning the day the SWG is officially formed. Charter Members are shown on the public SWG page. Extend the table as necessary.</p>
 </div>
@@ -801,71 +783,46 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Organization</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Johannes Echterhoff</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:johannes.echterhoff@igsi.eu">johannes.echterhoff@igsi.eu</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">iGSI</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">FirstName LastName</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:example@example.org">example@example.org</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Example</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Aaron Braeckel</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:braeckel@ucar.edu">braeckel@ucar.edu</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">National Center for Atmospheric Research (NCAR)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">FirstName LastName</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:example@example.org">example@example.org</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Example</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Alex Robin</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:Alexandre.Robin@spotimage.fr">Alexandre.Robin@spotimage.fr</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SpotImage</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">FirstName LastName</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:example@example.org">example@example.org</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Example</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Thomas Everding</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:everdingt@uni-muenster.de">everdingt@uni-muenster.de</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">IfGI</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">FirstName LastName</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:example@example.org">example@example.org</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Example</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yves Coene</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:Yves.Coene@spacebel.be">Yves.Coene@spacebel.be</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Spacebel</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">FirstName LastName</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:example@example.org">example@example.org</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Example</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Patrick Jacques</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:Patrick.Jacques@spacebel.be">Patrick.Jacques@spacebel.be</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Spacebel</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Mike Botts</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:mike.botts@botts-inc.net">mike.botts@botts-inc.net</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Botts Inc</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frédéric Guillaud</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">mailto:Frederic.Guillaud@meteo.fr[<a href="mailto:Frederic.Guillaud@meteo.fr">Frederic.Guillaud@meteo.fr</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Météo France</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Pete Trevelyan</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:peter.trevelyan@metoffice.gov.uk">peter.trevelyan@metoffice.gov.uk</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Met Office UK</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Oliver Newell</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:olivern@ll.mit.edu">olivern@ll.mit.edu</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">MIT Lincoln Laboratory</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Panagiotis (Peter) A. Vretanos</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:pvretano@cubewerx.com">pvretano@cubewerx.com</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">CubeWerx Inc.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">FirstName LastName</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:example@example.org">example@example.org</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Example</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_conveners"><a class="anchor" href="#_conveners"></a>8.6. Conveners</h3>
+<h3 id="_conveners"><a class="anchor" href="#_conveners"></a>8.4. Conveners</h3>
 <div class="paragraph">
-<p>Johannes Echterhoff (iGSI)</p>
+<p>FirstName LastName</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_background"><a class="anchor" href="#_background"></a>8.7. Background</h3>
+<h3 id="_background"><a class="anchor" href="#_background"></a>8.5. Background</h3>
 <div class="paragraph">
 <p>This section is from the 2010 charter and may not get carried over into the 2023 recharter.</p>
 </div>
@@ -902,7 +859,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-06-23 12:35:25 UTC
+Last updated 2023-06-23 19:17:30 UTC
 </div>
 </div>
 </body>
