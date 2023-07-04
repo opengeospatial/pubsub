@@ -92,7 +92,11 @@ OGC API Standards specify Web based capabilities which are typically based on po
 The SWG shall review existing material, e.g. in form of OGC Engineering Reports and Standards (both OGC and external), to produce a version 1.0 implementation standard that clearly defines how to enable publish/subscribe functionality for implementations of OGC API Standards in a common way. If applicable, this standard may become a future part of the OGC API - Common standard. The items that need to be addressed by the SWG include:
 
 . Write a core document that clearly defines the requirements for enabling publish/subscribe functionality.
-. Write extension documents that define how to realize the core publish/subscribe functionality for a specific service binding (e.g. AsyncAPI, MQTT) – for the bindings the SWG decides to support in the initial version of the standard.
+. Write extension documents that define how to describe a Pub/Sub service's capabilities
+. Write extension documents that define how to realize the core publish/subscribe functionality for a specific service binding (e.g. MQTT, AMQP, Kafka, etc.) – for the bindings the SWG decides to support in the initial version of the standard.
+. Write extension documents that define how to integrate publish/subscribe functionality with OGC API standards
+. Write extension documents that define baseline payloads for publish/subscribe services
+
 . Develop examples and – if necessary to enable core functionality – conceptual models and their JSON Schema implementation (e.g. for notification metadata).
 . Address any other technical and/or editorial issues that arise during the review period.
 
@@ -220,7 +224,7 @@ The following people support this proposal and are committed to the Charter and 
 
 |====
 |Name | Email| Organization
-| FirstName LastName| mailto:example@example.org[example@example.org]| Example
+| Tom Kralidis| mailto:tom.kralidis@ec.gc.ca[tom.kralidis@ec.gc.ca]| Meteorological Service of Canada
 | FirstName LastName| mailto:example@example.org[example@example.org]| Example
 | FirstName LastName| mailto:example@example.org[example@example.org]| Example
 | FirstName LastName| mailto:example@example.org[example@example.org]| Example
