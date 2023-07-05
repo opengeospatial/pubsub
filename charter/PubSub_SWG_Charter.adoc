@@ -77,7 +77,7 @@ Please feel free to forward this announcement to any other appropriate lists. Th
 
 == Purpose of the Standards Working Group
 
-The purpose of the {titletext} is to define an OGC Implementation Standard that enables publish/subscribe functionality for all implemementations of OGC API Standards in a well-defined manner.
+The purpose of the {titletext} is to define an OGC Implementation Standard that enables publish/subscribe functionality for resources supported by OGC API Standards in a well-defined manner.
 
 == Business value proposition
 
@@ -85,18 +85,19 @@ The purpose of the {titletext} is to define an OGC Implementation Standard that 
 This section provides a statement describing the value of this standards activity in relation to the OGC Membership, the geospatial community, and the wider IT community. This statement can be in terms of the interoperability problem being solved, processing Change requests to meet market (and Member requirements), a policy requirement and/or some other business value proposition. The proposition described in this section does not have to be in economic terms.
 ////
 
-OGC API Standards specify Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection's temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a timely, efficient and low latency approach for delivery of data updates.
+OGC API Standards specify Web based capabilities which are typically based on polling for collection resource updates (new or changed or deleted features/records, coverages, maps, etc.). Depending on a collection's temporal resolution or frequency of updates or size, an event-driven / Publish-Subscribe architecture provides a timely, efficient and low latency approach for delivery of data updates or notifications.
 
 == Scope of work
 
-The SWG shall review existing material, e.g. in form of OGC Engineering Reports and Standards (both OGC and external), to produce a version 1.0 implementation standard that clearly defines how to enable publish/subscribe functionality for implementations of OGC API Standards in a common way. If applicable, this standard may become a future part of the OGC API - Common standard. The items that need to be addressed by the SWG include:
+The SWG shall review existing material, e.g. in form of OGC Engineering Reports and Standards (both OGC and external), to produce a version 1.0 implementation standard that clearly defines how to enable publish/subscribe functionality for implementations of OGC API Standards in a common way. The standard may be specified as a single part or as a multi-part standard. If applicable, this standard may become a future part of the OGC API - Common standard. 
 
-. Write a core document that clearly defines the requirements for enabling publish/subscribe functionality.
-. Write extension documents that define how to describe a Pub/Sub service's capabilities
-. Write extension documents that define how to realize the core publish/subscribe functionality for a specific service binding (e.g. MQTT, AMQP, Kafka, etc.) – for the bindings the SWG decides to support in the initial version of the standard.
+The items that need to be addressed by the SWG include:
+
+. Write a core requirements class that clearly defines the requirements for enabling publish/subscribe functionality.
+. Write a requirements class to publish the definition of an event-driven API with AsyncAPI.
+. Write one or more additional requirements classes that define how to realize the core publish/subscribe functionality for a specific service binding (MQTT, AMQP, Kafka, etc.) – for the bindings the SWG decides to support in the initial version of the standard.
 . Write extension documents that define how to integrate publish/subscribe functionality with OGC API standards
 . Write extension documents that define baseline payloads for publish/subscribe services
-
 . Develop examples and – if necessary to enable core functionality – conceptual models and their JSON Schema implementation (e.g. for notification metadata).
 . Address any other technical and/or editorial issues that arise during the review period.
 
@@ -117,7 +118,7 @@ This proposed standard is intended to be a major component of the OGC API framew
 
 === What is out of scope?
 
-The scope of the {titletext} is confined to enabling basic publish/subscribe functionality for existing and future OGC APIs. New filtering techniques will not be addressed, but adaptation of existing filtering mechanisms may be included. Advanced concepts such as pubsub security and Complex Event Processing are out of scope. Any other requirement or functionality the SWG decides to be not contributing to core publish/subscribe functionality is also out of scope.
+The scope of the {titletext} is confined to enabling basic publish/subscribe functionality for resources from existing and future OGC API Standards. New filtering techniques will not be addressed, but adaptation of existing filtering mechanisms may be included. Advanced concepts such as pubsub security and Complex Event Processing are out of scope. Any other requirement or functionality the SWG decides to be not contributing to core publish/subscribe functionality is also out of scope.
 
 Advanced concepts and functionality can be worked out in the future – once the work that is in scope for the SWG has been delivered.
 
@@ -156,6 +157,7 @@ There shall be at least two deliverables:
 . A document describing the core requirements regarding the support of publish-subscribe functionality in implementations of OGC API Standards.
 . A document describing how to implement these core requirements for each of the bindings the SWG decides to support. At least one such document will be produced by the SWG.
 
+The SWG may also decide to cover both deliverables in a single document.
 
 === Additional SWG tasks
 
