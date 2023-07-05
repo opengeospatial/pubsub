@@ -85,7 +85,7 @@ The purpose of the {titletext} is to define an OGC Implementation Standard that 
 This section provides a statement describing the value of this standards activity in relation to the OGC Membership, the geospatial community, and the wider IT community. This statement can be in terms of the interoperability problem being solved, processing Change requests to meet market (and Member requirements), a policy requirement and/or some other business value proposition. The proposition described in this section does not have to be in economic terms.
 ////
 
-OGC API Standards specify Web based capabilities which are typically based on polling for collection resource updates (new or changed or deleted features/records, coverages, maps, etc.). Depending on a collection's temporal resolution or frequency of updates or size, an event-driven / Publish-Subscribe architecture provides a timely, efficient and low latency approach for delivery of data updates or notifications.
+OGC API Standards specify Web based capabilities which are typically based on polling for collection resource updates (new or changed or deleted features/records, coverages, maps, data, etc.). Depending on a collection's temporal resolution or frequency of updates or size, an event-driven / Publish-Subscribe architecture provides a timely, efficient and low latency approach for delivery of data updates or notifications.
 
 == Scope of work
 
