@@ -230,7 +230,7 @@ The following people support this proposal and are committed to the Charter and 
 | Chris Little| mailto:chris.little@metoffice.gov.uk[chris.little@metoffice.gov.uk]| Met Office
 | Steve Olson| mailto:steve.r.olson@noaa.gov[steve.r.olson@noaa.gov]| NOAA
 | Tom Kralidis| mailto:tom.kralidis@ec.gc.ca[tom.kralidis@ec.gc.ca]| Meteorological Service of Canada
-| FirstName LastName| mailto:example@example.org[example@example.org]| Example
+| Clemens Portele| mailto:portele@interactive-instruments.de[portele@interactive-instruments.de]| interactive instruments
 | FirstName LastName| mailto:example@example.org[example@example.org]| Example
 | FirstName LastName| mailto:example@example.org[example@example.org]| Example
 | FirstName LastName| mailto:example@example.org[example@example.org]| Example
