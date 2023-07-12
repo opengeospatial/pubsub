@@ -103,6 +103,8 @@ The items that need to be addressed by the SWG include:
 
 Only those functional requirements and comments submitted through the formal process as identified in the Policy and Procedures shall be addressed. Items suggested through emails, vocal discussions, etc. will be outside of the scope of this SWG unless the SWG decides to include them.
 
+NOTE: The management of subscriptions is out of scope of Part 1, but may be included in future extensions.
+
 === Statement of relationship of planned work to the current OGC Standards baseline
 
 ////
