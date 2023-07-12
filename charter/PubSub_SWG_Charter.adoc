@@ -125,7 +125,7 @@ The scope of the {titletext} is confined to enabling basic publish/subscribe fun
 === Specific existing work used as starting point
 
 The starting point for this implementation standard shall be the "Discussion Paper for Publish-Subscribe Workflow in OGC
-APIs" (OGC 23-013). This charter also recognizes the prior work done for OGC Web Services (OWS) as specified in the OGC® Publish/Subscribe Interface Standard 1.0 - Core Standard (OGC 13-131r1) and OGC® Publish/Subscribe Interface Standard 1.0 SOAP Protocol Binding Extension (OGC 13-133r1). *Note however that OWS Pub/Sub standards shall not be referenced normatively in the proposed new standard.*
+APIs" (OGC 23-013). This charter also recognizes the prior work done for OGC Web Services (OWS) as specified in the OGC® Publish/Subscribe Interface Standard 1.0 - Core Standard (OGC 13-131r1). 
 
 === Is this a persistent SWG
 
@@ -135,7 +135,7 @@ APIs" (OGC 23-013). This charter also recognizes the prior work done for OGC Web
 
 === When can the SWG be inactivated
 
-The {titletext} shall be dissolved after the following milestones have been achieved:
+The {titletext} shall be inactivated after the following milestones have been achieved:
 
 * The SWG has reviewed input provided by the OGC and perhaps other communities.
 * The SWG produced the candidate standards listed below.
@@ -161,9 +161,7 @@ The SWG may also decide to cover both deliverables in a single document.
 
 === Additional SWG tasks
 
-////
-Describe each additional Standard to be developed by the SWG as an additional task after the deliverables from the initial charter have been completed. This section is blank in a new charter, then is populated with each task approval request per the OGC TC Policies and Procedures.
-////
+The SWG may decide to work on additional bindings in new parts of the standard.
 
 == IPR Policy for this SWG
 
@@ -173,7 +171,7 @@ Describe each additional Standard to be developed by the SWG as an additional ta
 
 == Anticipated audience / participants
 
-Any organization that has a requirement for enabling clients to subscribe to data that is published by an implementation of an OGC API Standard and of interest to the client and to have the API notify the client when such data is available. Also, organizations that want to enable Event Architecture as well as Event Processing functionality in their computing environment.
+Any organization that has a requirement for enabling clients to subscribe to a resource that is published by an implementation of an OGC API Standard and of interest to the client and to have the API notify the client when such data is available. Also, organizations that want to enable Event Architecture as well as Event Processing functionality in their computing environment.
 
 In general, all geospatial service providers / end users that have a need to publish/receive notifications about events of interest as soon as they are detected.
 
