@@ -120,9 +120,7 @@ This proposed standard is intended to be a major component of the OGC API framew
 
 === What is out of scope?
 
-The scope of the {titletext} is confined to enabling basic publish/subscribe functionality for resources from existing and future OGC API Standards. New filtering techniques will not be addressed, but adaptation of existing filtering mechanisms may be included. Advanced concepts such as pubsub security and Complex Event Processing are out of scope. Any other requirement or functionality the SWG decides to be not contributing to core publish/subscribe functionality is also out of scope.
-
-Advanced concepts and functionality can be worked out in the future – once the work that is in scope for the SWG has been delivered.
+The scope of the {titletext} is confined to enabling basic publish/subscribe functionality for resources from existing and future OGC API Standards. Any other requirement or functionality the SWG decides to be not contributing to core publish/subscribe functionality is also out of scope.
 
 === Specific existing work used as starting point
 
