@@ -96,10 +96,12 @@ The items that need to be addressed by the SWG include:
 . Write a core requirements class that clearly defines the requirements for enabling publish/subscribe functionality.
 . Write a requirements class to publish the definition of an event-driven API with AsyncAPI.
 . Write one or more additional requirements classes that define how to realize the core publish/subscribe functionality for a specific service binding (MQTT, AMQP, Kafka, etc.) – for the bindings the SWG decides to support in the initial version of the standard.
-. Write extension documents that define how to integrate publish/subscribe functionality with OGC API standards
+. Write extension documents that define how to integrate publish/subscribe functionality with OGC API Standards
 . Write extension documents that define baseline payloads for publish/subscribe services
 . Develop examples and – if necessary to enable core functionality – conceptual models and their JSON Schema implementation (e.g. for notification metadata).
 . Address any other technical and/or editorial issues that arise during the review period.
+
+The Standard will include security considerations.
 
 Only those functional requirements and comments submitted through the formal process as identified in the Policy and Procedures shall be addressed. Items suggested through emails, vocal discussions, etc. will be outside of the scope of this SWG unless the SWG decides to include them.
 
