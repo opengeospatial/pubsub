@@ -20,7 +20,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: 2023-09-27
 |Approval Date:   <yyyy-mm-dd>
-|Internal reference number of this OGC(R) document:    10-182r4
+|Internal reference number of this OGC(R) document:    10-182r5
 |Category: OGC(R) Standards Working Group Charter
 |Authors:   Chris Little
 |===
