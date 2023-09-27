@@ -18,9 +18,9 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: 2023-06-08
+|Submission Date: 2023-09-27
 |Approval Date:   <yyyy-mm-dd>
-|Internal reference number of this OGC(R) document:    10-182r4
+|Internal reference number of this OGC(R) document:    10-182r5
 |Category: OGC(R) Standards Working Group Charter
 |Authors:   Chris Little
 |===
@@ -222,7 +222,7 @@ The following standards and projects may be relevant to the SWG's planned work, 
 
 === Supporters of this Charter
 
-The following people support this proposal and are committed to the Charter and projected meeting schedule. These members are known as SWG Founding or Charter members. The charter members agree to the SoW and IPR terms as defined in this charter. The charter members have voting rights beginning the day the SWG is officially formed. Charter Members are shown on the public SWG page. Extend the table as necessary.
+The following people support this proposal and are committed to the Charter and projected meeting schedule. These members are known as SWG Founding or Charter members. The charter members agree to the SoW and IPR terms as defined in this charter. The charter members have voting rights beginning the day the SWG is officially formed. Charter Members are shown on the public SWG page.
 
 |====
 |Name | Email| Organization
@@ -231,10 +231,6 @@ The following people support this proposal and are committed to the Charter and 
 | Steve Olson| mailto:steve.r.olson@noaa.gov[steve.r.olson@noaa.gov]| NOAA
 | Tom Kralidis| mailto:tom.kralidis@ec.gc.ca[tom.kralidis@ec.gc.ca]| Meteorological Service of Canada
 | Clemens Portele| mailto:portele@interactive-instruments.de[portele@interactive-instruments.de]| interactive instruments
-| FirstName LastName| mailto:example@example.org[example@example.org]| Example
-| FirstName LastName| mailto:example@example.org[example@example.org]| Example
-| FirstName LastName| mailto:example@example.org[example@example.org]| Example
-| FirstName LastName| mailto:example@example.org[example@example.org]| Example
 |====
 
 === Conveners
@@ -242,23 +238,6 @@ The following people support this proposal and are committed to the Charter and 
 * Panagiotis (Peter) A. Vretanos
 * Chris Little
 
-=== Background
-
-This section is from the 2010 charter and may not get carried over into the 2023 recharter.
-
-The Sensor Web Enablement (SWE) initiative definition of the Sensor Alert Service (SAS) specification was the first step in developing an OGC Standard that defines publish/subscribe functionality for all OGC Web Services (OWS). The development of SAS continued until 2007 and resulted in a Best Practices document. The SAS was not released as OGC Standard. One reason for this was that the SAS defined its own publish/subscribe interface. OGC members rightly requested that the SAS should make use of existing standards to enable publish/subscribe.
-
-This request led to the development of the Sensor Event Service (SES) engineering specification. Like the SAS, the SES was designed as a broker between notification producers (e.g. sensors) and notification consumers (e.g. client applications or other services). In contrast to the SAS, the SES used the Web Services Notification (WS-N) standards from OASIS for achieving the publish/subscribe functionality. The SES document was released as an OGC Discussion Paper in 2008. Due to the experience gained with the development of the SES, WS-N was also selected to be used in the SWE Service Model (SWES) for performing publish/subscribe in the SOAP binding. The Sensor Planning Service (SPS) 2.0 depends upon SWES and thus also uses WS-N for enabling publish/subscribe functionality in its SOAP binding.
-
-In 2009, in the OWS-6 testbed, the first version of the Event Architecture (EA) was developed. This work built on the experiences in developing the SAS and the SES engineering specifications but the focus for the EA was not on the development of a service specification. The resulting OWS-6 public Engineering Report (09-032) describes an abstract event architecture including the definition of important terms, an application schema for events and roles and interfaces for the abstract architecture – including interfaces for subscribing for and receiving notifications. This abstract architecture was also mapped to multiple use cases and OGC services to show how it could be applied in various OWSs. In addition related problems and technologies are described like common messaging patterns, event processing, acknowledgements of events and canceling of events.
-
-Work on a cross-thread Event Architecture continued in OWS-7. The resulting report (10-060r1) defines the actual publish / subscribe functionality in much more detail.
-
-In the development of the Event Architecture, Web Services Eventing (WS-E) and ATOM were also considered, besides WS-N. WS-E from the W3C has a similar scope as WS-N but differs in some aspects. WS-E is currently proposed as W3C standard but not released as W3C Recommendation yet.
-
-There are three ATOM internet RFCs. The first is the Atom Syndication Format (ASF) which is an XML based format for the description of lists of related information (feeds). The Atom Publishing Protocol (AtomPub) is used for editing and publishing web resources encoded as ATOM feeds. PubSubHubBub (PSHB) is a protocol that extends ATOM feeds to support push based communication via feeds instead of pulling (requesting) information updates. ATOM feeds have successfully been used in the Geosynchronization work that was performed in OWS-7.
-
-Based upon the experiences made so far regarding the enablement of publish/subscribe in OWS, the OWS PubSub SWG will develop an OGC Standard that supports the requirements regarding PubSub in OWS. Furthermore, this Standard will define in detail how existing Standards that are well used in the IT domain are to be used to enable publish/subscribe functionality in OGC services.
 
 
 == References
