@@ -226,7 +226,7 @@ The following people support this proposal and are committed to the Charter and 
 
 |====
 |Name | Email| Organization
-| Panagiotis (Peter) A. Vretanos | mailto:panagiotis.vretanos@mariadb.com[panagiotis.vretanos@mariadb.com]| MariaDB
+| Panagiotis (Peter) A. Vretanos | mailto:pvretano@cubewerx.com[pvretano@cubewerx.com]| CubeWerx Inc.
 | Chris Little| mailto:chris.little@metoffice.gov.uk[chris.little@metoffice.gov.uk]| Met Office
 | Steve Olson| mailto:steve.r.olson@noaa.gov[steve.r.olson@noaa.gov]| NOAA
 | Tom Kralidis| mailto:tom.kralidis@ec.gc.ca[tom.kralidis@ec.gc.ca]| Meteorological Service of Canada
