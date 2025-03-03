@@ -1,0 +1,7 @@
+[[per_pubsub_protocols]]
+[permission]
+====
+[%metadata]
+identifier:: /per/pubsub/protocols
+part:: An implementation of the Publish-Subscribe workflows described in this Standard MAY use the message queueing protocol of their choice and/or based on application requirements.
+====

@@ -1,0 +1,63 @@
+[obligation=informative]
+== Overview
+
+Implementations of OGC API Standards provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a timely, efficient and low latency approach for delivery of data resource updates.
+
+The following requirements and recommendations apply to Publish-Subscribe architectural patterns for use with implementations of OGC API Standards.
+
+The Publish-Subscribe architecture assumes reasonable connectivity or favorable DDIL conditions. https://csrc.nist.gov/glossary/term/denied_disrupted_intermittent_and_limited_impact[DDIL] refers to Denied, Disrupted, Intermittent, or Limited communications.
+
+== Use cases
+Numerous use cases exist for event driven architecture and Publish-Subscribe workflows.
+
+=== OGC API - Common: new collections
+
+TODO
+
+=== OGC API - Features: new or updated data
+
+TODO
+
+.Example of Publish-Subscribe workflow using OGC APIs
+image::images/example-pubsub-workflow-ogcapi.png[Example of Publish-Subscribe workflow using OGC APIs]
+
+=== OGC API - Records: new or updated metadata
+
+TODO
+
+=== OGC API - Processes: process execution job updates
+
+TODO
+
+=== OGC API - Processes: message replay
+
+TODO
+
+=== OGC API - Environmental Data Retrieval: Earth System Prediction model run and data granules notification
+
+A given numerical weather prediction system produces a weather forecast as part of a model run.  A model run typically has associated forecast hours.  Each forecast hour makes available one or many weather elements at different pressure levels of the atmosphere.
+
+For example, Canada's Global Deterministic Prediction System (GDPS) produces two model runs per day, providing forecast of numerous weather elements for 33 pressure levels, at a resolution of 15 kilometres.footnote:[https://eccc-msc.github.io/open-data/msc-data/nwp_gdps/readme_gdps_en].
+
+A Pub/Sub workflow can be applied to an NWP system where:
+
+- notifications are sent as individual weather elements (data granules) become available
+- notifications are sent once the model run generation is complete, or "fully qualified"
+
+As a result, Pub/Sub would eliminate the need for continuous polling while a model run is in progress.
+
+== Channels
+
+The OGC API service endpoint specified by a URL path of resources and sub-resources can be used in parallel as a channel description when the data publisher wishes to provide Pub/Sub capability for resources normally available via an OGC API implementations instance in the same way. Below are examples of service endpoints or resources normally available via HTTP, and how they can be re-used as topics for Pub/Sub workflow:
+
+- ``/collections``: Notifies Subscribers whenever there is a change to the ``/collections`` resource (for example, addition of a new collection). The message payload would be collection metadata as defined in the https://docs.ogc.org/DRAFTS/20-024.html#collection-description[OGC API - Common - Part 2: Geospatial Data candidate Standard], or a message referencing the collection metadata.
+
+- ``/collections/{collectionId}``: Notifies Subscribers whenever there is an update to a single `collection` resource (for example, spatial or temporal extents, new items, etc.). The message payload would be defined by either the resource model of the given collection (items, etc.), or a notification message of metadata referencing the collection with the relevant change.
+
+For example, users could use a subscription to metadata records, which are usually small compared to the source data, and are therefore more transportable. This informs and notifies the user of changes prior to requesting the possibly large source data, especially when bandwidth is at a premium.
+
+Using the OGC API service endpoints of the URL path of resource and sub-resources provides the key benefit that developers implementing OGC API Standards do not need to learn a different, additional approach or resource path for Pub/Sub (same content, additional interface).
+
+=== Client side filtering
+
+As a broker client, I want to be able to filter message payloads (when not possible via a topic structure), so that I can process / action payloads only matching a given criteria.
