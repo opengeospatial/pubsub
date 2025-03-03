@@ -1,0 +1,57 @@
+<bibdata type="standard" schema-version="v1.2.9">
+  <fetched>2025-03-03</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">OGC® Publish/Subscribe Interface Standard 1.0</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Core</title>
+  <title type="main" format="text/plain" language="en" script="Latn">OGC® Publish/Subscribe Interface Standard 1.0 - Core</title>
+  <uri type="src">http://www.opengis.net/doc/IS/pubsub-core/1.0.0</uri>
+  <uri type="obp">https://docs.ogc.org/is/13-131r1/13-131r1.html</uri>
+  <docidentifier type="OGC" primary="true">13-131r1</docidentifier>
+  <date type="published">
+    <on>2016-08-22</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Aaron Braeckel </completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Lorenzo Bigagli </completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Johannes Echterhoff</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">Publish/Subscribe 1.0 is an interface specification that supports the core components and concepts of the Publish/Subscribe message exchange pattern with OGC Web Services. The Publish/Subscribe pattern complements the Request/Reply pattern specified by many existing OGC Web Services. This specification may be used either in concert with, or independently of, existing OGC Web Services to publish data of interest to interested Subscribers.
+
+Publish/Subscribe 1.0 primarily addresses subscription management capabilities such as creating a subscription, renewing a subscription, and unsubscribing.  However, this standard also allows Publish/Subscribe services to advertise and describe the supported message delivery protocols such as SOAP messaging, ATOM, and AMQP.  Message delivery protocols should be considered to be independent of the Publish/Subscribe 1.0 standard.  Therefore, OGC Publish/Subscribe only includes metadata relating to message delivery protocols in sufficient detail to allow for different implementations of Publish/Subscribe 1.0 to interoperate. 
+
+This specification defines Publish/Subscribe functionality independently of the binding technology (e.g., KVP, SOAP, REST). Extensions to this specification may realize these core concepts with specific binding technologies.</abstract>
+  <ext schema-version="v1.0.1">
+    <doctype>standard</doctype>
+    <subdoctype>implementation</subdoctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

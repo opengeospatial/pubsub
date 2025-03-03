@@ -1,0 +1,11 @@
+$schema: 'https://json-schema.org/draft/2020-12/schema'
+$id: 'https://schemas.opengis.net/ogcapi/pubsub/part1/1.0/openapi/schemas/link.yaml'
+title: OGC API - Pub/Sub message payload link definition
+description: OGC API - Pub/Sub message payload link definition
+
+allOf:
+  - $ref: 'https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.yaml'
+  - properties:
+      channel:
+        type: string
+        description: topic to subscribe to for Publish-Subscribe workflow

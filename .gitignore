@@ -1,1 +1,13 @@
 .DS_Store
+
+document.adoc
+document.doc
+document.err.html
+document.html
+document.pdf
+document.pdf.err
+document.presentation.xml
+document.xml
+*.xml_tmp
+
+_tmp_images_*
