@@ -1,4 +1,4 @@
-# PubSub Standard Working Group (SWG)
+# PubSub Standards Working Group (SWG)
 
 Welcome to the OGC PubSub SWG GitHub Repo.
 
