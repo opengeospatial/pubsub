@@ -1,1 +1,15 @@
 .DS_Store
+
+document.doc
+document.err.html
+document.html
+document.pdf
+document.pdf.err
+document.presentation.xml
+document.xml
+*.xml_tmp
+*.notfound
+standard/iev
+standard/relaton
+
+_tmp_images_*

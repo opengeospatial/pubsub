@@ -1,0 +1,8 @@
+[conformance_class]
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/ogcapi-pubsub-1/1.0/conf/pubsub
+target:: https://www.opengis.net/spec/ogcapi-pubsub-1/1.0/req/pubsub
+classification:: Target Type:Pub/Sub
+abstract-test:: /conf/pubsub/api
+====

@@ -1,0 +1,54 @@
+== Terms, definitions and abbreviated terms
+
+=== Terms and definitions
+
+==== Broker
+Intermediary between Subscribers and other Publishers which have been previously registered with the Broker. The Broker is not the original producer of Messages, but acts as an intermediary, (re-)publishing messages received from other Publishers and decoupling them from their Subscribers.
+
+==== Collection
+A geospatial resource that may be available as one or more sub-resource distributions that conform to one or more OGC API Standards. (OGC 20-024)
+
+==== Dataset
+A collection of data, published or curated by a single agent, and available for access or download in one or more representations. (DCAT)
+
+==== Distribution
+A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above). (DCAT)
+
+==== Subscriber
+An entity that creates a subscription to a Publisher.
+
+==== Message
+A container within which data (such as JSON, XML, binary data, or other content) is transported. Messages may include additional information beyond data, including headers or other metadata used for routing or security purposes.
+
+==== Channel
+A term (string) used to filter messages from a Broker.
+
+=== Abbreviated terms
+AMQP::
+  Advanced Message Queuing Protocol
+AMQPS::
+  Advanced Message Queuing Protocol Secure
+API::
+  Application Programming Interface
+HTTP::
+  Hypertext Transfer Protocol
+HTTPS::
+  Hypertext Transfer Protocol Secure
+IANA::
+  Internet Assigned Numbers Authority
+JSON::
+  JavaScript Object Notation
+MQP::
+  Message Queuing Protocol
+MQTT::
+  Message Queuing Telemetry Transport 
+MQTTS::
+  Message Queuing Telemetry Transport Secure
+OASIS::
+  Organization for the Advancement of Structured Information Standards 
+OGC::
+  Open Geospatial Consortium
+URI::
+  Uniform Resource Identifier
+YAML::
+  YAML Ain't Markup Language
