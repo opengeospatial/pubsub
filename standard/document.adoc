@@ -1,0 +1,69 @@
+= OGC API Publish-Subscribe Workflow - Part 1: Core
+:doctype: standard
+:docsubtype: implementation
+:encoding: utf-8
+:language: en
+:status: public-rfc
+:committee: technical
+:draft: 1.0
+:external-id: TODO
+:docnumber: TODO
+:received-date: YYYY-MM-DD
+:issued-date: YYYY-MM-DD
+:published-date: YYYY-MM-DD
+:fullname: Tom Kralidis
+:role: editor
+:fullname_2: Chris Little
+:fullname_3: Steve Olson
+:fullname_4: Clemens Portele
+:fullname_5: Panagiotis (Peter) A. Vretanos
+:fullname_6: Charles Heazel
+:keywords: OGC API, Pub/Sub, Publish, Subscribe, Publish-Subscribe, Event driven architecture, Asynchronous, OGC document, OGC
+:submitting-organizations: Meteorological Service of Canada; UK Met Office; US National Weather Service; Interactive Instruments GmbH; CubeWerx Inc.
+:mn-document-class: ogc
+:mn-output-extensions: xml,html,doc,pdf
+:local-cache-only:
+:data-uri-image:
+:pdf-uri: ./document.pdf
+:xml-uri: ./document.xml
+:doc-uri: ./document.doc
+:edition: 1.0
+
+////
+Make sure to complete each included document
+////
+include::sections/clause_0_front_material.adoc[]
+
+include::sections/clause_1_scope.adoc[]
+
+include::sections/clause_2_conformance.adoc[]
+
+include::sections/clause_3_references.adoc[]
+
+include::sections/clause_4_terms_and_definitions.adoc[]
+
+include::sections/clause_5_conventions.adoc[]
+
+include::sections/clause_6_informative_text.adoc[]
+
+include::sections/clause_7_pubsub.adoc[]
+
+include::sections/clause_8_pubsub-notification-message-payload.adoc[]
+
+
+////
+add or remove annexes after "A" as necessary
+////
+include::sections/annex-a.adoc[]
+
+include::sections/annex-pubsub.adoc[]
+
+include::sections/annex-pubsub-notification-message-payload.adoc[]
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+include::sections/annex-history.adoc[]
+
+include::sections/annex-bibliography.adoc[]
