@@ -8,41 +8,19 @@ The following requirements and recommendations apply to Publish-Subscribe archit
 The Publish-Subscribe architecture assumes reasonable connectivity or favorable DDIL conditions. https://csrc.nist.gov/glossary/term/denied_disrupted_intermittent_and_limited_impact[DDIL] refers to Denied, Disrupted, Intermittent, or Limited communications.
 
 == Use cases
-Numerous use cases exist for event driven architecture and Publish-Subscribe workflows.
 
-=== OGC API - Common: new collections
+Numerous use cases exist for event driven architecture and Publish-Subscribe workflows in OGC APIs:
 
-TODO
-
-=== OGC API - Features: new or updated data
-
-TODO
+- OGC API - Common: new collections: a data publisher making their data available as a collection via an OGC API wishes to advertise a new dataset publication
+- OGC API - Features: a client wishes subscribe to data granule inserts, updates or deletes from a feature collection
 
 .Example of Publish-Subscribe workflow using OGC APIs
 image::images/example-pubsub-workflow-ogcapi.png[Example of Publish-Subscribe workflow using OGC APIs]
 
-=== OGC API - Records: new or updated metadata
-
-TODO
-
-=== OGC API - Processes: process execution job updates
-
-TODO
-
-=== OGC API - Processes: message replay
-
-TODO
-
-=== OGC API - Environmental Data Retrieval: Earth System Prediction model run and data granules notification
-
-A given numerical weather prediction system produces a weather forecast as part of a model run.  A model run typically has associated forecast hours.  Each forecast hour makes available one or many weather elements at different pressure levels of the atmosphere.
-
-For example, Canada's Global Deterministic Prediction System (GDPS) produces two model runs per day, providing forecast of numerous weather elements for 33 pressure levels, at a resolution of 15 kilometres.footnote:[https://eccc-msc.github.io/open-data/msc-data/nwp_gdps/readme_gdps_en].
-
-A Pub/Sub workflow can be applied to an NWP system where:
-
-- notifications are sent as individual weather elements (data granules) become available
-- notifications are sent once the model run generation is complete, or "fully qualified"
+- OGC API - Records: a client wishes to subscribe to metadata updates from a given metadata repository.  Instead of traditional polling (for the last 24 hours of updates, for example), real-time notifications are sent whenever metadata record is added, updated or deleted
+- OGC API - Processes: a wishes to execute a long running process.  Instead of polling for job status updates, the user can subscribe to a Pub/Sub broker to receive status updates in real-time.
+- OGC API - Processes: a user subscribed to real-time notifications of synoptic weather observations loses their connection for 6 hours.  A custom process allows for a user to specify a time range, area of interest, and topic(s), as well as a subscriber id to be used as part of a callback which is configured before executing the process (user subscription to their "replay" topic).  When the proces executes, the server immediately responds via HTTP with Pub/Sub connection details, and via Pub/Sub, returns notifications based on the user query inputs.  This use case is similar to a typical OGC API - Features request/response, but the difference is being able to use Pub/Sub workflow as part of the response.
+- OGC API - Environmental Data Retrieval: Earth System Prediction model run and data granules notifications: A given numerical weather prediction system produces a weather forecast as part of a model run.  A model run typically has associated forecast hours.  Each forecast hour makes available one or many weather elements at different pressure levels of the atmosphere.  For example, Canada's Global Deterministic Prediction System (GDPS) produces two model runs per day, providing forecast of numerous weather elements for 33 pressure levels, at a resolution of 15 kilometres.footnote:[https://eccc-msc.github.io/open-data/msc-data/nwp_gdps/readme_gdps_en].  A Pub/Sub workflow can be applied to an NWP system where a) notifications are sent as individual weather elements (data granules) become available and b) notifications are sent once the model run generation is complete, or "fully qualified"
 
 As a result, Pub/Sub would eliminate the need for continuous polling while a model run is in progress.
 
