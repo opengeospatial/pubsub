@@ -1,0 +1,10 @@
+[conformance_class]
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/ogcapi-pubsub-1/1.0/conf/message-payload-geojson
+target:: https://www.opengis.net/spec/ogcapi-pubsub-1/1.0/req/message-payload-geojson
+abstract-test:: /conf/message-payload-geojson/encoding
+abstract-test:: /conf/message-payload-geojson/id
+abstract-test:: /conf/message-payload-geojson/operation
+abstract-test:: /conf/message-payload-geojson/pubtime
+====

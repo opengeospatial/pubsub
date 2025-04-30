@@ -1,0 +1,7 @@
+[[req_message-payload-geojson_pubtime]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/message-payload-geojson/pubtime
+part:: A message SHALL provide a `+properties.pubtime+` property in RFC 3339 format.
+====

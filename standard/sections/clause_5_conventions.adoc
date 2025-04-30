@@ -29,6 +29,8 @@ The following https://www.iana.org/assignments/link-relations/link-relations.xht
 
 * **service-desc**: Identifies service description for this context that is primarily intended for consumption by machines.  API definitions are considered service descriptions.
 
+* **service-doc**: Identifies service documentation for the context that is primarily intended for human consumption.
+
 Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an **enclosure** link could reference a bulk download of a collection. Or a **related** link on a feature could reference a related feature.
 
 === Examples

@@ -1,0 +1,7 @@
+[[req_discovery_links-from-ogcapi-to-pubsub]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/discovery/links-from-ogcapi-to-pubsub
+part:: To link to a Pub/Sub broker from an OGC API resource link, an OGC API link object SHALL use the ``hub`` link relation.
+====

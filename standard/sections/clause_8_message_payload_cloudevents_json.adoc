@@ -1,0 +1,84 @@
+[[message-payload-cloudevents-json-section]]
+== Requirements Class Message Payloads - CloudEvents (JSON)
+
+=== Overview
+
+include::../requirements/requirements_class_message-payload-cloudevents-json.adoc[]
+
+While the Publish-Subscribe (Pub/Sub) Requirements Class recommends a machine-readable message payload,
+this Requirements Class provides further requirements for CloudEvents (JSON) interoperability of message payloads as part of an OGC API implementation ecosystem.
+
+=== Encoding
+
+CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.
+
+include::../requirements/message-payload-cloudevents-json/REQ_encoding.adoc[]
+
+=== `type`
+
+CloudEvents defines the type of event related to the event message encoding, using a reverse DNS notation as recommended by the CloudEvents specification.
+
+OGC API "types" are defined below to communicate to a client the type of event the message represents.
+
+.Example CloudEvents message payload with a created inline feature
+====
+[source,json]
+----
+{
+  "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
+  "specversion": "1.0",
+  "type": "org.ogc.api.collection.item.create",
+  "source": "https://example.org/api/collections/obs",
+  "subject": "https://example.org/api/collections/obs/items/964",
+  "time": "2025-08-27T12:36:33Z",
+  "datacontenttype": "application/json",
+  "data": {
+    "type": "Feature",
+    "id": "964",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -122,
+        49
+      ]
+    },
+    "properties": {
+      "stn_id": 604,
+      "datetime": "2000-10-30T18:24:39Z",
+      "value": 99.9
+    },
+    "links": [
+      {
+        "rel": "collection",
+        "type": "application/json",
+        "title": "Observations",
+        "href": "https://example.org/api/collections/obs"
+      }
+    ]
+  }
+}
+----
+====
+
+.Example CloudEvents message payload with a created feature by reference
+====
+[source,json]
+----
+{
+  "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
+  "specversion": "1.0",
+  "type": "org.ogc.api.collection.item.create",
+  "source": "https://example.org/api/collections/obs",
+  "subject": "https://example.org/api/collections/obs/items/964",
+  "time": "2025-08-27T12:36:33Z",
+  "datacontenttype": "application/json",
+  "data": {
+    "type": "application/geo+json",
+    "rel": "item",
+    "href": "https://example.org/api/collections/obs/items/964",
+  }
+}
+----
+====
+
+include::../requirements/message-payload-cloudevents-json/REQ_type.adoc[]

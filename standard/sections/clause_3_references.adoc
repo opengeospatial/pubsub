@@ -9,11 +9,11 @@ The following normative documents contain provisions that, through reference in 
 
 * [[[AsyncAPI300,AsyncAPI 3.0.0]]], _AsyncAPI Specification_ https://www.asyncapi.com/docs/reference/specification/v3.0.0
 
-* [[[WIS2Guide,WMO WIS2 Guide]]], _DRAFT WMO guidance on technical specifications of WIS 2.0_ https://wmo-im.github.io/wis2-guide
+* [[[WMO-WIS2-Guide,WMO WIS2 Guide]]], _Guide to the WMO Information System Volume II - WMO Information System 2.0_ https://library.wmo.int/idurl/4/69130
 
-* [[[WMO-WNM,WMO WNM]]], _DRAFT WMO WIS2 Notification Message_ https://github.com/wmo-im/wis2-notification-message
+* [[[WMO-WIS2-WNM,WMO WIS2 Notification Message]]], _WMO WIS2 Notification Message_ https://wmo-im.github.io/wis2-notification-message/standard/wis2-notification-message-STABLE.html
 
-* [[[WMO-TOPICS,WMO TOPICS]]], _DRAFT WMO WIS2 Topic Hierarchy_ https://github.com/wmo-im/wis2-topic-hierarchy
+* [[[WMO-WIS2-WTH,WMO WIS2 Topic Hierarchy]]], _WMO WIS2 Topic Hierarchy_ https://wmo-im.github.io/wis2-topic-hierarchy/standard/wis2-topic-hierarchy-STABLE.html
 
 * [[[WebSockets,WebSockets]]], _WebSockets_ https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
 
@@ -23,8 +23,12 @@ The following normative documents contain provisions that, through reference in 
 
 * [[[OGC17-069r4,OGC 17-069r4]]], _OGC API - Features - Part 1: Core corrigendum_ (2022)
 
-* [[[OGC20-004,OGC 20-004]]], _DRAFT OGC API - Records - Part 1: Core_ (n.d.). https://docs.ogc.org/DRAFTS/20-004.html
+* [[[OGC20-004r1,OGC 20-004r1]]], _OGC API - Records - Part 1: Core_ (2025)
 
 * [[[OGC23-057r1,OGC 23-057r1]]], _OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow_ (2024)
 
 * [[[RFC7946,RFC 7946]]], _GeoJSON_, https://www.rfc-editor.org/rfc/rfc7946
+
+* [[[CloudEvents,CloudEvents]]], _CloudEvents_, https://github.com/cloudevents/spec
+
+* [[[CloudEvents-JSON ,JSON Event Format for CloudEvents]]], _CloudEvents_, https://github.com/cloudevents/spec/blob/main/cloudevents/formats/json-format.md

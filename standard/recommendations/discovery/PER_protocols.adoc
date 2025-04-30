@@ -1,0 +1,7 @@
+[[per_discovery_protocols]]
+[permission]
+====
+[%metadata]
+identifier:: /per/discovery/protocols
+part:: An implementation of the Publish-Subscribe workflows described in this Standard MAY use the message queueing protocol of their choice and/or based on application requirements.
+====

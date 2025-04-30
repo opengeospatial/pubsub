@@ -1,0 +1,9 @@
+[[req_discovery_links-from-ogcapi-to-asyncapi]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/discovery/links-from-ogcapi-to-asyncapi
+part:: A landing page SHALL provide a link reference to the description of its Publish-Subscribe capabilities using a link relation of `+service-desc+`.
+part:: An API SHALL provide the description of its Publish-Subscribe capabilities using AsyncAPI to describe supported protocols, channels, and message payload descriptions.
+part:: To link to a Pub/Sub channel from an OGC API resource, an OGC API link object SHALL structure the ``href`` property to reference the AsyncAPI document (in JSON or YAML) with a URI fragment to the relevant channel.
+====

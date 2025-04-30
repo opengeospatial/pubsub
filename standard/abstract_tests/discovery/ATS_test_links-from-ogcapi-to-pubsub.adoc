@@ -1,0 +1,14 @@
+[[conf_discovery_links-from-ogcapi-to-pubsub]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/discovery/links-from-ogcapi-to-pubsub
+target:: /req/discovery/links-from-ogcapi-to-pubsub
+test-purpose:: Validate that an implementation of OGC API provides links to Pub/Sub brokers using `+rel=hub+`.
+test-method::
++
+--
+TODO
+--
+====

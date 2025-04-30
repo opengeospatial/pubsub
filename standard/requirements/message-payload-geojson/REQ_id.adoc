@@ -1,0 +1,7 @@
+[[req_message-payload-geojson_id]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/message-payload-geojson/id
+part:: A message SHALL provide an `+id+` property as a globally unique identifier for the message.
+====

@@ -46,19 +46,22 @@ include::sections/clause_5_conventions.adoc[]
 
 include::sections/clause_6_informative_text.adoc[]
 
-include::sections/clause_7_pubsub.adoc[]
+include::sections/clause_7_discovery.adoc[]
 
-include::sections/clause_8_pubsub-notification-message-payload.adoc[]
+include::sections/clause_8_message_payload_cloudevents_json.adoc[]
 
+include::sections/clause_9_message_payload_geojson.adoc[]
 
 ////
 add or remove annexes after "A" as necessary
 ////
 include::sections/annex-a.adoc[]
 
-include::sections/annex-pubsub.adoc[]
+include::sections/annex-discovery.adoc[]
 
-include::sections/annex-pubsub-notification-message-payload.adoc[]
+include::sections/annex-message-payload-cloudevents-json.adoc[]
+
+include::sections/annex-message-payload-geojson.adoc[]
 
 ////
 Revision History should be the last annex before the Bibliography

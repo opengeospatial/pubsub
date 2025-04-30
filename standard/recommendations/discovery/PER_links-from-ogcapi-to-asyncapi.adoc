@@ -1,0 +1,7 @@
+[[per_discovery_links-from-ogcapi-to-asyncapi]]
+[permission]
+====
+[%metadata]
+identifier:: /per/discovery/links-from-ogcapi-to-asyncapi
+part:: A landing page MAY provide a link reference to a description of its Publish-Subscribe capabilities for human consumption using a link relation of ``service-doc``.
+====

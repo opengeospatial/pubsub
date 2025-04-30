@@ -1,0 +1,115 @@
+[[req_message-payload-cloudevents-json_type]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/message-payload-cloudevents-json/type
+part:: CloudEvents SHALL provide the following ``type``, ``datacontenttype`` and ``dataschema`` ``data`` matrix:
+
+|===
+|``type``|``datacontenttype``|``dataschema``|``data``
+
+|`org.ogc.api.collection.create`
+|`application/json`
+|`https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/heads/master/collections/openapi/schemas/common-geodata/collectionDesc.yaml` or `https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.json`
+|JSON payload of a created collection description (inline or link)
+
+|`org.ogc.api.collection.replace`
+|`application/json`
+|`https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/heads/master/collections/openapi/schemas/common-geodata/collectionDesc.yaml` or `https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.json`
+|JSON payload of an updated (full) collection description (inline or link)
+
+|`org.ogc.api.collection.update`
+|`application/json`
+|`https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/heads/master/collections/openapi/schemas/common-geodata/collectionDesc.yaml` or `https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.json`
+|JSON payload of an updated (partial) collection description (inline or link)
+
+|`org.ogc.api.collection.update`
+|`text/plain`
+|diff
+|`diff` payload of changes to an updated (partial) collection description
+
+|`org.ogc.api.collection.delete`
+|`text/plain`
+|None
+|Identifier of deleted collection
+
+|`org.ogc.api.collection.item.create`
+|`application/json`
+|`https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/heads/master/collections/openapi/schemas/common-geodata/collectionDesc.yaml` or `https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.json`
+|JSON payload of a created collection item (inline or link)
+
+|`org.ogc.api.collection.item.replace`
+|`application/json`
+|`https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/heads/master/collections/openapi/schemas/common-geodata/collectionDesc.yaml` or `https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.json`
+|JSON payload of an updated (full) collection item (inline or link)
+
+|`org.ogc.api.collection.item.update`
+|`application/json`
+|`https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/heads/master/collections/openapi/schemas/common-geodata/collectionDesc.yaml` or `https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.json`
+|JSON payload of an updated (partial) collection item (inline or link)
+
+|`org.ogc.api.collection.update`
+|`text/plain`
+|diff
+|`diff` payload of changes to an updated (partial) collection item
+
+|`org.ogc.api.collection.item.delete`
+|`text/plain`
+|None
+|Identifier of deleted collection item
+
+|`org.ogc.api.collection.tile.create`
+|`text/plain`
+|None
+|Identifier of the created tile in x/y/z
+
+|`org.ogc.api.collection.tile.replace`
+|`text/plain`
+|None
+|Identifier of the updated (full) tile in x/y/z
+
+|`org.ogc.api.collection.tile.update`
+|`text/plain`
+|None
+|Identifier of the updated (partial) tile in x/y/z
+
+|`org.ogc.api.collection.tile.update`
+|`text/plain`
+|None
+|Identifier of deleted tile in x/y/z
+
+|`org.ogc.api.process.deploy`
+|`application/json`
+|`https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/process.yaml` or `https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/link.yaml`
+|JSON payload of a deployed process description (inline or link)
+
+|`org.ogc.api.process.replace`
+|`application/json`
+|`https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/process.yaml` or `https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/link.yaml`
+|JSON payload of a replaced process description (inline or link)
+
+|`org.ogc.api.process.undeploy`
+|`text/plain`
+|None
+|Identfier of the deleted process
+
+|`org.ogc.api.job.create`
+|`application/json`
+|`https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/statusInfo.yaml` or `https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/link.yaml`
+|JSON payload of a created job status (inline or link)
+
+|`org.ogc.api.job.status`
+|`application/json`
+|`https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/statusInfo.yaml` or `https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/link.yaml`
+|JSON payload of a job status (inline or link)
+
+|`org.ogc.api.job.delete`
+|`text/plain`
+|None
+|Identifier of the deleted job
+
+|`org.ogc.api.job.result`
+|`application/json`
+|`https://github.com/opengeospatial/ogcapi-processes/blob/master/openapi/schemas/processes-core/inlineOrRefData.yaml` or `https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/link.yaml`
+|JSON payload of a job result (inline or link)
+====

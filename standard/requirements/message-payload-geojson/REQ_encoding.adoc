@@ -1,0 +1,7 @@
+[[req_message-payload-geojson_encoding]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/message-payload-geojson/encoding
+part:: A message encoding SHALL be compliant to IETF RFC 7946 GeoJSON.
+====

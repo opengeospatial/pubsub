@@ -1,0 +1,12 @@
+[[rc_message-payload-geojson]]
+[requirements_class]
+.Requirements Class 'Message Payloads - GeoJSON'
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/ogcapi-pubsub-1/1.0/req/message-payload-geojson
+subject:: Pub/Sub
+requirement:: /req/message-payload-geojson/encoding
+requirement:: /req/message-payload-geojson/id
+requirement:: /req/message-payload-geojson/operation
+requirement:: /req/message-payload-geojson/pubtime
+====
