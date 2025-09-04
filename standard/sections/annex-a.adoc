@@ -1,20 +1,32 @@
 [appendix,obligation="normative"]
 == Conformance Class Abstract Test Suite
 
-=== Conformance Class Publish-Subscribe (Pub/Sub)
+=== Conformance Class Discovery
 
-include::../abstract_tests/ATS_class_pubsub.adoc[]
+include::../abstract_tests/ATS_class_discovery.adoc[]
 
-include::../abstract_tests//pubsub/ATS_test_api.adoc[]
+include::../abstract_tests/discovery/ATS_test_links-from-ogcapi-to-asyncapi.adoc[]
 
-=== Conformance Class Publish-Subscribe (Pub/Sub) Message Payloads
+include::../abstract_tests/discovery/ATS_test_links-from-asyncapi-to-ogcapi.adoc[]
 
-include::../abstract_tests/ATS_class_pubsub_notification_message_payload.adoc[]
+include::../abstract_tests/discovery/ATS_test_links-from-ogcapi-to-pubsub.adoc[]
 
-include::../abstract_tests/pubsub-notification-message-payload/ATS_test_geojson.adoc[]
+=== Conformance Class Publish-Subscribe (Pub/Sub) Message Payloads - CloudEvents (JSON)
 
-include::../abstract_tests/pubsub-notification-message-payload/ATS_test_id.adoc[]
+include::../abstract_tests/ATS_class_message-payload-cloudevents-json.adoc[]
 
-include::../abstract_tests/pubsub-notification-message-payload/ATS_test_operation.adoc[]
+include::../abstract_tests/message-payload-cloudevents-json/ATS_test_encoding.adoc[]
 
-include::../abstract_tests/pubsub-notification-message-payload/ATS_test_pubtime.adoc[]
+include::../abstract_tests/message-payload-cloudevents-json/ATS_test_type.adoc[]
+
+=== Conformance Class Publish-Subscribe (Pub/Sub) Message Payloads - GeoJSON
+
+include::../abstract_tests/ATS_class_message-payload-geojson.adoc[]
+
+include::../abstract_tests/message-payload-geojson/ATS_test_encoding.adoc[]
+
+include::../abstract_tests/message-payload-geojson/ATS_test_id.adoc[]
+
+include::../abstract_tests/message-payload-geojson/ATS_test_operation.adoc[]
+
+include::../abstract_tests/message-payload-geojson/ATS_test_pubtime.adoc[]

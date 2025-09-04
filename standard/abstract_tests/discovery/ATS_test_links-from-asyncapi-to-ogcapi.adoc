@@ -1,0 +1,17 @@
+[[conf_discovery_links-from-asyncapi-to-ogcapi]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/discovery/links-from-asyncapi-to-ogcapi
+target:: /req/discovery/links-from-asyncapi-to-ogcapi
+test-purpose:: Validate that an AsyncAPI document provides links to OGC API resources.
+test-method::
++
+--
+1. Construct a path for the AsyncAPI document
+2. Issue a HTTP GET request on that path
+3. Inspect all `+channeles+` objects in the response
+4. Ensure that at least one exists with an `+x-ogc-link+` property that is a link object, containing `+type+`, `+rel+`, and `+href+` properties
+--
+====

@@ -1,0 +1,19 @@
+[[conf_discovery_links-from-ogcapi-to-asyncapi]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/discovery/links-from-ogcapi-to-asyncapi
+target:: /req/discovery/links-from-ogcapi-to-asyncapi
+test-purpose:: Validate that an implementation of OGC API provides AsyncAPI capabilities.
+test-method::
++
+--
+1. Construct a path for the API landing page
+2. Issue a HTTP GET request on that path
+3. Inspect all `+link+` objects in the response
+4. Ensure that at least one exists with `+rel=service-desc+` that corresponds to an AsyncAPI description, with a corresponding `+href+` property
+5. Issue a HTTP GET request on `+href+` property
+6. Ensure that the response contains a valid AsyncAPI document
+--
+====

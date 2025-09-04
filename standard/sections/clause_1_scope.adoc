@@ -4,4 +4,4 @@ The OGC API - Publish-Subscribe Workflow - Part 1: Core Standard defines buildin
 
 This Standard defines a discovery capability that contains a topic structure in support of binding to notifications for data access and retrieval.
 
-This Standard defines a baseline message payload which can contain summary descriptive information in GeoJSON about a given notification for new data events (new granule, new model run, etc.).
+This Standard also defines baseline message payloads which can contain summary descriptive information about a given notification for new data events (new granule, new model run, etc.).

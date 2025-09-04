@@ -1,0 +1,7 @@
+[[req_message-payload-geojson_operation]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/message-payload-geojson/operation
+part:: A message SHALL provide the `+properties.operation+` property to indicate if a resource has been created, updated or deleted.
+====

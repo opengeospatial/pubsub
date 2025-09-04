@@ -3,8 +3,9 @@ Conformance with this Standard SHALL be checked using all the relevant tests spe
 
 Requirements for the following standardization target types are considered:
 
-* AsyncAPI
-* Notification message payloads
+* Discovery
+* Message payloads - CloudEvents (JSON)
+* Message payloads - GeoJSON
 
 In order to conform to this Standard, a software implementation SHALL choose to implement:
 

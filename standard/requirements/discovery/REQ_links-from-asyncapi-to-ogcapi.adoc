@@ -1,0 +1,7 @@
+[[req_discovery_links-from-asyncapi-to-ogcapi]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/discovery/links-from-asyncapi-to-ogcapi
+part:: To link an OGC API endpoint/resource from an AsyncAPI document, an AsyncAPI document SHALL utilize the ``x-ogc-link`` construct as part of a channel definition.
+====

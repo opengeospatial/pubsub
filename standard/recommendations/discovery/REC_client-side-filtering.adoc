@@ -1,0 +1,7 @@
+[[rec_discovery_client-side-filtering]]
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/discovery/client-side-filtering
+part:: To support client side filtering, client applications SHOULD use an AsyncAPI document's channel ``messages`` to determine the model of the resulting message payload.
+====

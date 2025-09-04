@@ -1,0 +1,71 @@
+[appendix,obligation="informative"]
+
+== Message Payload Examples - GeoJSON
+
+[[message-payload-geojson-examples]]
+
+=== Message Payload Example
+
+The World Meteorological Organization (https://wmo.int[WMO]) is a specialized agency of the United Nations responsible for promoting international cooperation on meteorological, climatological, hydrological, and related environmental services, to improve well-being of all. The WMO WIS2 standard notification message format ensures that the WIS2 ecosystem (data publisher, data user, and global services) is a robust, effective, and unified exchange platform for weather, climate, and water data. The message provides notification metadata about the availability of a new data granule. The message is encoded using a GeoJSON object, and provides detailed information on the data notification (associated datetime of the granule, publishing datetime, integrity), as well as access to the data via a link object or inline content (useful for encoding small messages). Geometry is required (given GeoJSON requirements), however geometry can be expressed with a null value when generating the geometry in the message is not possible, practical or timely for data publishers. To support extensibility, additional properties are also valid (given the default definition in JSON Schema).
+
+Using a GeoJSON object as the message payload supports broad interoperability given the large ecosystem of tooling (decoders, encoders) supporting the same approach. An example web application demonstrating the ease of integration can be found at https://kralidis.ca/tmp/wis2-data-notifications.html.
+
+An example WIS2 Notification Message can be found below, extending the OGC API - Pub/Sub Notification Message Requirements with domain specific properties as required:
+
+====
+[source,json]
+----
+{
+    "id": "31e9d66a-cd83-4174-9429-b932f1abe1be",
+    "version": "v04",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.146255135536194,
+            46.223296618227444
+        ]   
+    },  
+    "properties": {
+        "pubtime": "2022-03-20T04:50:18.314854383Z",
+        "operation": "create",
+        "datetime": "2022-03-20T04:45:00Z",
+        "integrity": {
+            "method": "sha512",
+            "value": "A2KNxvks...S8qfSCw=="
+        },  
+        "data_id": "dataset/123/data-granule/UANT01_CWAO_200445___15103.bufr4",
+        "metadata_id": "urn:x-wmo:md:can:eccc-msc:observations.swob",
+        "content": {
+            "encoding": "utf-8",
+            "value": "encoded bytes from the file",
+            "size": 457 
+        }   
+    },  
+    "links": [
+        {   
+            "href": "https://example.org/data/4Pubsub/92c557ef-d28e-4713-91af-2e2e7be6f8ab.bufr4",
+            "rel": "canonical",
+            "type": "application/x-bufr"
+        },
+        {
+            "href": "https://example.org/oapi/collections/my-dataset/items/my-data-granule",
+            "rel": "item",
+            "type": "application/json"
+        }
+    ]
+}
+----
+====
+
+
+[[message-payload-geojson-schema]]
+
+=== Payload Schema
+
+====
+[source,yaml]
+----
+include::../openapi/schemas/message-payload-geojson-schema.yaml[]
+----
+====

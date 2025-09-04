@@ -1,0 +1,7 @@
+[[rec_message-payload-geojson-id]]
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/message-payload-geojson/id
+part:: For message payloads that provide notification metadata about a resource publication, an `+id+` property SHOULD use a UUID.
+====

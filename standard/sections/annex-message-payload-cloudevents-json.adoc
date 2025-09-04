@@ -1,0 +1,27 @@
+[appendix,obligation="informative"]
+
+== Message Payload Examples - CloudEvents (JSON)
+
+[[message-payload-cloudevents-examples]]
+
+=== Message Payload Example
+
+.Message payload example in CloudEvents (JSON)
+====
+[source,json]
+----
+{
+    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
+    "specversion": "1.0",
+    "type": "org.ogc.api.collection.item.create",
+    "source": "https://example.org/api/collections/catalogue",
+    "subject": "https://example.org/api/collections/catalogue/items/123",
+    "time": "2025-08-27T12:36:33Z",
+    "datacontenttype": "application/json",
+    "data": {
+        "title": "New metadata record published",
+        "description": "New metadata record published to catalogue"
+    }
+}
+----
+====

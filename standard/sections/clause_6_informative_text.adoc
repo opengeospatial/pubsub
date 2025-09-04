@@ -21,12 +21,13 @@ image::images/example-pubsub-workflow-ogcapi.png[Example of Publish-Subscribe wo
 - OGC API - Processes: a wishes to execute a long running process.  Instead of polling for job status updates, the user can subscribe to a Pub/Sub broker to receive status updates in real-time.
 - OGC API - Processes: a user subscribed to real-time notifications of synoptic weather observations loses their connection for 6 hours.  A custom process allows for a user to specify a time range, area of interest, and topic(s), as well as a subscriber id to be used as part of a callback which is configured before executing the process (user subscription to their "replay" topic).  When the proces executes, the server immediately responds via HTTP with Pub/Sub connection details, and via Pub/Sub, returns notifications based on the user query inputs.  This use case is similar to a typical OGC API - Features request/response, but the difference is being able to use Pub/Sub workflow as part of the response.
 - OGC API - Environmental Data Retrieval: Earth System Prediction model run and data granules notifications: A given numerical weather prediction system produces a weather forecast as part of a model run.  A model run typically has associated forecast hours.  Each forecast hour makes available one or many weather elements at different pressure levels of the atmosphere.  For example, Canada's Global Deterministic Prediction System (GDPS) produces two model runs per day, providing forecast of numerous weather elements for 33 pressure levels, at a resolution of 15 kilometres.footnote:[https://eccc-msc.github.io/open-data/msc-data/nwp_gdps/readme_gdps_en].  A Pub/Sub workflow can be applied to an NWP system where a) notifications are sent as individual weather elements (data granules) become available and b) notifications are sent once the model run generation is complete, or "fully qualified"
+- OGC API - Connected Systems: TODO add summary of use vehicle collision monitoring case
 
-As a result, Pub/Sub would eliminate the need for continuous polling while a model run is in progress.
+As a result, as an event driven design pattern, Pub/Sub eliminates the need for continuous polling while a model run is in progress.
 
 == Channels
 
-The OGC API service endpoint specified by a URL path of resources and sub-resources can be used in parallel as a channel description when the data publisher wishes to provide Pub/Sub capability for resources normally available via an OGC API implementations instance in the same way. Below are examples of service endpoints or resources normally available via HTTP, and how they can be re-used as topics for Pub/Sub workflow:
+The OGC API service endpoint specified by a URL path of resources and sub-resources can be used in parallel as a channel description when the data publisher wishes to provide Pub/Sub capability for resources normally available via an OGC API implementations instance in the same way. Below are examples of service endpoints or resources normally available via HTTP, and how they can be reused as topics for Pub/Sub workflow:
 
 - ``/collections``: Notifies Subscribers whenever there is a change to the ``/collections`` resource (for example, addition of a new collection). The message payload would be collection metadata as defined in the https://docs.ogc.org/DRAFTS/20-024.html#collection-description[OGC API - Common - Part 2: Geospatial Data candidate Standard], or a message referencing the collection metadata.
 
@@ -36,6 +37,6 @@ For example, users could use a subscription to metadata records, which are usual
 
 Using the OGC API service endpoints of the URL path of resource and sub-resources provides the key benefit that developers implementing OGC API Standards do not need to learn a different, additional approach or resource path for Pub/Sub (same content, additional interface).
 
-=== Client side filtering
+=== Providing notification metadata from an OGC API endpoint
 
-As a broker client, I want to be able to filter message payloads (when not possible via a topic structure), so that I can process / action payloads only matching a given criteria.
+For brokers providing notification metadata (as opposed to actual data or record payloads), an implementation of OGC API Building Blocks can, in parallel, provide GeoJSON based notification messages via (for example) an OGC API — Features or OGC API - Records endpoint. Providing message payloads via an OGC API provides the additional benefit of querying for messages over time in case of a lost connection.

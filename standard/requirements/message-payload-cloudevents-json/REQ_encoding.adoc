@@ -1,0 +1,7 @@
+[[req_message-payload-cloudevents-json_encoding]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/message-payload-cloudevents-json/encoding
+part:: A message encoding SHALL be compliant to the JSON Event Format for CloudEvents JSON format for CloudEvents Specification (v1.0.2).
+====

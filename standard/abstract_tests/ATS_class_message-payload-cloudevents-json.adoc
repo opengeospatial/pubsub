@@ -1,0 +1,9 @@
+[conformance_class]
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/ogcapi-pubsub-1/1.0/conf/message-payload-cloudevents-json
+target:: https://www.opengis.net/spec/ogcapi-pubsub-1/1.0/req/message-payload-cloudevents-json
+classification:: Target Type:Pub/Sub
+abstract-test:: /conf/message-payload-cloudevents-json/encoding
+abstract-test:: /conf/message-payload-cloudevents-json/type
+====
