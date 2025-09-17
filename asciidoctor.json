@@ -1,0 +1,19 @@
+{
+    "0": {
+        "OGC_doc_number": "25-030",
+        "urn": "http://www.opengis.net/doc/is/ogcapi-pubsub-1/1.0",
+        "title": "OGC API Publish-Subscribe Workflow - Part 1: Core",
+        "path": "standard/document.adoc",
+        "options": [
+            "--trace"
+        ],
+        "a": [
+            "data-uri",
+            "stylesdir=./resources/stylesheets",
+            "dot=/usr/bin/dot"
+        ],
+        "r": [
+            "asciidoctor-diagram"
+        ]
+    }
+}
