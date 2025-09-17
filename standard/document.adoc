@@ -3,11 +3,11 @@
 :docsubtype: implementation
 :encoding: utf-8
 :language: en
-:status: public-rfc
+:status: draft
 :committee: technical
 :draft: 1.0
-:external-id: TODO
-:docnumber: TODO
+:external-id: http://www.opengis.net/doc/IS/ogcapi-pubsub-1/1.0
+:docnumber: 25-030
 :received-date: YYYY-MM-DD
 :issued-date: YYYY-MM-DD
 :published-date: YYYY-MM-DD
