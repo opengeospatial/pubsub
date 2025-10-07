@@ -20,3 +20,5 @@ Part 1 is implemented on any transactions, publishing messages via MQTT using th
 Landing page:
 
 * https://demo.pycsw.org/cite
+
+More information can be found in the [documentation](https://docs.pycsw.org/en/latest/pubsub.html).
