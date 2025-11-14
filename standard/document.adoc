@@ -52,6 +52,8 @@ include::sections/clause_8_message_payload_cloudevents_json.adoc[]
 
 include::sections/clause_9_message_payload_geojson.adoc[]
 
+include::sections/clause_10_media_types.adoc[]
+
 ////
 add or remove annexes after "A" as necessary
 ////
