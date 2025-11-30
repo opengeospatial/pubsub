@@ -29,6 +29,8 @@ The following normative documents contain provisions that, through reference in 
 
 * [[[RFC7946,RFC 7946]]], _GeoJSON_, https://www.rfc-editor.org/rfc/rfc7946
 
+* [[[RFC7386,RFC 7386]]], _JSON Merge Patch_, https://www.rfc-editor.org/rfc/rfc7386
+
 * [[[CloudEvents,CloudEvents]]], _CloudEvents_, https://github.com/cloudevents/spec
 
 * [[[CloudEvents-JSON ,JSON Event Format for CloudEvents]]], _CloudEvents_, https://github.com/cloudevents/spec/blob/main/cloudevents/formats/json-format.md
