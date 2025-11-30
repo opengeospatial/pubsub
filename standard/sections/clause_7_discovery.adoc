@@ -49,8 +49,6 @@ Based on research and testing, the Pub/Sub White Paper recommended the use of As
 }
 ----
 
-NOTE: the media type for an AsyncAPI document may change in the future as decided by the AsyncAPI community footnote:[https://github.com/asyncapi/spec/issues/936].
-
 To provide a link to a specific collection's events, an AsyncAPI URI fragment is used to address a specific channel.
 
 .Example of OGC API Pub/Sub link to an AsyncAPI document addressing a specific channel
