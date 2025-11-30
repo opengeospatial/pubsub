@@ -11,7 +11,7 @@ test-method::
 --
 1. Construct a path for the AsyncAPI document
 2. Issue a HTTP GET request on that path
-3. Inspect all `+channeles+` objects in the response
+3. Inspect all `+channels+` objects in the response
 4. Ensure that at least one exists with an `+x-ogc-link+` property that is a link object, containing `+type+`, `+rel+`, and `+href+` properties
 --
 ====

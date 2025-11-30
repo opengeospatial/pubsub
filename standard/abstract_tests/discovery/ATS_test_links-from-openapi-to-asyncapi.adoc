@@ -1,0 +1,22 @@
+[[conf_discovery_links-from-openapi-to-asyncapi]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/discovery/links-from-openapi-to-asyncapi
+target:: /req/discovery/links-from-openapi-to-asyncapi
+test-purpose:: Validate that an OpenAPI document provides valid OGC link or linkTemplate objects.
+test-method::
++
+--
+1. Construct a path for the API landing page
+2. Issue a HTTP GET request on that path
+3. Inspect all `+link+` objects in the response
+4. Ensure that at least one exists with `+rel=service-desc+` that corresponds to an OpenAPI description, with a corresponding `+href+` property
+5. Issue a HTTP GET request on `+href+` property
+6. Ensure that the response contains a valid OpenAPI document
+7. Search all ``paths`` objects for the existence of ``x-ogc-link`` or ``x-ogc-linkTemplate`` objects
+8. For each ``x-ogc-link`` object, issue a HTTP GET request on the `+href+` property, and ensure that there is a valid response.
+8. For each ``x-ogc-linkTemplate`` object, issue a HTTP GET request on the `+uriTemplate+` property, and ensure that there is a valid response.
+--
+====
