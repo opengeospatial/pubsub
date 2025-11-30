@@ -1,0 +1,39 @@
+[[media-types-section]]
+== Media Types
+
+=== Overview
+
+The OGC API - Publish-Subscribe Workflows Standard provides requirements classes for message payload encodings that are commonly used in event driven implementations, including <<rc_message-payload-cloudevents-json,CloudEvents>> and <<rc_message-payload-geojson,GeoJSON>>, as well as <<rc_discovery,AsyncAPI documents>>.  This clause indicates the media types that are to be used for these encodings of the resources defined in this Standard.
+
+=== Media types
+
+A description of the MIME types is mandatory for any OGC API Standard that specifies requirements for data encoding(s). <<media-types-table>> provides a list of suitable MIME types for <<rc_message-payload-cloudevents-json,CloudEvents>> and <<rc_message-payload-geojson,GeoJSON>>, as well as <<rc_discovery,AsyncAPI documents>>.
+
+[#media-types-table,reftext='{table-caption} {counter:table-num}']
+.OGC API - Publish-Subscribe Workflow media types
+[width="80%",cols="1,1,1",options="header"]
+|===
+|Resource type|Link relation|Media type
+
+|AsyncAPI document (JSON)
+|`service-desc`
+|`application/asyncapi+json`
+
+|AsyncAPI document (YAML)
+|`service-desc`
+|`application/asyncapi+yaml`
+
+|AsyncAPI document (HTML)
+|`service-doc`
+|`text/html`
+
+|CloudEvents message payload (JSON)
+|N/A
+|`application/json`
+
+|GeoJSON message payload (JSON)
+|N/A
+|`application/geo+json`
+
+
+|===

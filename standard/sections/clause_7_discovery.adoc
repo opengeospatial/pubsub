@@ -32,7 +32,7 @@ Based on research and testing, the Pub/Sub White Paper recommended the use of As
 ----
 {
     "rel": "service-desc",
-    "type": "application/json",
+    "type": "application/asyncapi+json",
     "title": "AsyncAPI document",
     "href": "https://example.org/asyncapi?f=json"
 }
