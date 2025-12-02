@@ -188,7 +188,7 @@ components:
                 - id
 ----
 
-By inspecting the message payload definition in the AsyncAPI channel, a client can perform the below workflows against messages when subscribed to the relevant channel:
+By inspecting the message payload definition in the AsyncAPI channel, a client can perform the following workflows against messages when subscribed to the relevant channel:
 
 * JSON Schema validation
 * Evaluating each message based on a property (for example, searching the ``title`` property in the above example for a certain string pattern or regular expression)
