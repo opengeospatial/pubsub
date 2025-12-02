@@ -161,7 +161,7 @@ include::../recommendations/discovery/PER_links-from-ogcapi-to-pubsub.adoc[]
 
 === Client side filtering
 
-In some cases, users may wish to filter message payloads (when not possible via a channel or topic structure), to process payloads matching a given criteria. AsyncAPI natively supports this use case by describing a channel's message payload using JSON Schema, thereby allowing for apriori knowledge of the payload when developing client applications.
+In some cases, users may wish to filter message payloads (when not possible via a channel or topic structure), to process payloads matching given criteria. AsyncAPI natively supports this use case by describing a channel's message payload using JSON Schema, thereby allowing for apriori knowledge of the payload when developing client applications.
 
 .AsyncAPI example of message payload definition
 [source,yaml]
