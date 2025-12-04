@@ -29,11 +29,17 @@ A description of the MIME types is mandatory for any OGC API Standard that speci
 
 |CloudEvents message payload (JSON)
 |N/A
-|`application/json`
+|`application/cloudevents+json`
+
+|CloudEvents batch message payload (JSON)
+|N/A
+|`application/cloudevents-batch+json`
 
 |GeoJSON message payload (JSON)
 |N/A
 |`application/geo+json`
+
+NOTE: media types for CloudEvents payloads are not yet registered with IANA (related discusssion can be found in footnote:[https://github.com/cloudevents/spec/issues/1375]).
 
 
 |===
