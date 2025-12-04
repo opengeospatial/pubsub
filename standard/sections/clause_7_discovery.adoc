@@ -88,6 +88,28 @@ notify-collections:
 
 include::../requirements/discovery/REQ_links-from-asyncapi-to-ogcapi.adoc[]
 
+=== Links from OpenAPI to AsyncAPI
+
+Given OGC APIs utilize OpenAPI to describe a API, an ``x-ogc-link`` can be made available to refer to the Pub/Sub equivalent for the given resource.  In addition, an ``x-ogc-linkTemplate`` object can be used when referring to an AsyncAPI fragment that includes https://www.asyncapi.com/docs/reference/specification/v3.0.0#channel-address-expressions[channel address expressions].
+
+.OpenAPI ``x-ogc-linkTemplate`` example link to an AsyncAPI fragment with a channel address expression
+[source,json]
+----
+{
+    "/collections/discovery-metadata/items": {
+        "get": {
+            "description": "Discovery metadata records",
+            "operationId": "getDiscoveryMetadataItems",
+        ...
+        },
+        "x-ogc-linkTemplate": {
+            "uriTemplate": "https://example.org/asyncapi.json#/channels/{collectionId}"
+        }
+}
+----
+
+include::../requirements/discovery/REQ_links-from-openapi-to-asyncapi.adoc[]
+
 === Links from OGC API to Pub/Sub resources
 
 The links array could also provide references to the Pub/Sub capabilities available on the service. A *collection* link could reference a collection update notification channel.

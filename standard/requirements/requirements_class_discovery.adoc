@@ -7,5 +7,6 @@ identifier:: https://www.opengis.net/spec/ogcapi-pubsub-1/1.0/req/discovery
 subject:: Pub/Sub
 requirement:: /req/discovery/links-from-asyncapi-to-ogcapi
 requirement:: /req/discovery/links-from-ogcapi-to-asyncapi
+requirement:: /req/discovery/links-from-openapi-to-asyncapi
 requirement:: /req/discovery/links-from-ogcapi-to-pubsub
 ====
