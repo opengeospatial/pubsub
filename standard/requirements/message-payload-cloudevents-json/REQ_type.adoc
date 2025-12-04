@@ -28,6 +28,11 @@ part:: CloudEvents SHALL provide the following ``type``, ``datacontenttype`` and
 |diff
 |`diff` payload of changes to an updated (partial) collection description
 
+|`org.ogc.api.collection.update`
+|`application/merge-patch+json`
+|JSON Merge Patch
+|JSON Merge Patch payload of changes to an updated (partial) collection description
+
 |`org.ogc.api.collection.delete`
 |`text/plain`
 |None
@@ -48,10 +53,15 @@ part:: CloudEvents SHALL provide the following ``type``, ``datacontenttype`` and
 |`https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/heads/master/collections/openapi/schemas/common-geodata/collectionDesc.yaml` or `https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.json`
 |JSON payload of an updated (partial) collection item (inline or link)
 
-|`org.ogc.api.collection.update`
+|`org.ogc.api.collection.item.update`
 |`text/plain`
 |diff
 |`diff` payload of changes to an updated (partial) collection item
+
+|`org.ogc.api.collection.item.update`
+|`application/merge-patch+json`
+|JSON Merge Patch
+|JSON Merge Patch payload of changes to an updated (partial) collection item
 
 |`org.ogc.api.collection.item.delete`
 |`text/plain`
