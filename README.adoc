@@ -7,7 +7,7 @@ The https://portal.ogc.org/index.php?m=projects&a=view&project_id=366&tab=0[PubS
 # Draft PubSub Specifications
 
 * OGC API Publish-Subscribe Workflow - Part 1: Core (DRAFT)
-** Editor's draft https://docs.ogc.org/DRAFTS/25-030.html[HTML] or https://docs.ogc.org/DRAFTS/25-030.pdf:[PDF]
+** Editor's draft https://docs.ogc.org/DRAFTS/25-030.html[HTML] or https://docs.ogc.org/DRAFTS/25-030.pdf[PDF]
 
 Draft(s) are built daily based on the configuration contained in the https://github.com/opengeospatial/pubsub/blob/main/asciidoctor.json[asciidoctor.json] file.
 
