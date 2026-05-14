@@ -39,7 +39,4 @@ A description of the MIME types is mandatory for any OGC API Standard that speci
 |N/A
 |`application/geo+json`
 
-NOTE: media types for CloudEvents payloads are not yet registered with IANA (related discusssion can be found in footnote:[https://github.com/cloudevents/spec/issues/1375]).
-
-
 |===
