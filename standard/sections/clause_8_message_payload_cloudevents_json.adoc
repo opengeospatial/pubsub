@@ -18,7 +18,7 @@ include::../requirements/message-payload-cloudevents-json/REQ_encoding.adoc[]
 
 CloudEvents defines the type of event related to the event message encoding, using a reverse DNS notation as recommended by the CloudEvents specification.
 
-OGC API "types" are defined below to communicate to a client the type of event the message represents.
+OGC API ``type`` patterns are defined to communicate to a client the type of event the message represents.  It is expected that downstream OGC API "resource" based standards will inherit and concretely define channels related to core workflows and events of those respective standards.
 
 .Example CloudEvents message payload with a created inline feature
 ====
@@ -82,3 +82,4 @@ OGC API "types" are defined below to communicate to a client the type of event t
 ====
 
 include::../requirements/message-payload-cloudevents-json/REQ_type.adoc[]
+include::../recommendations/message-payload-cloudevents-json/REC_type.adoc[]
