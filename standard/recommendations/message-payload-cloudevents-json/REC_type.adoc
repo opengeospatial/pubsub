@@ -1,0 +1,8 @@
+[[rec_message-payload-cloudevents-json-type]]
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/message-payload-cloudevents-json/type
+part:: A CloudEvents ``type`` SHOULD include the resource type pertaining to the message (e.g. ``collection``, ``collection.item``, ``collection.map``, ``process``, ``job``, etc.)
+part:: For transactions of resources, a CloudEvents ``type`` SHOULD include the operation pertaining to a given resource (e.g. ``create``, ``replace``, ``update``, ``delete``, etc.).
+====
