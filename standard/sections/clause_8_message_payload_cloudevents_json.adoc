@@ -75,7 +75,7 @@ OGC API ``type`` patterns are defined to communicate to a client the type of eve
   "data": {
     "type": "application/geo+json",
     "rel": "item",
-    "href": "https://example.org/api/collections/obs/items/964",
+    "href": "https://example.org/api/collections/obs/items/964"
   }
 }
 ----
