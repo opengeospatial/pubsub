@@ -124,7 +124,7 @@ Communicating event driven workflow from a link object is made via the `+hub+` l
 {
     "rel": "hub",
     "title": "Data notifications",
-    "href": "mqtt://example.org:8883",
+    "href": "mqtt://example.org:8883"
 }
 ----
 
