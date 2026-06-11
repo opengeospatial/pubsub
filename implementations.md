@@ -8,6 +8,7 @@ This page points to implementations of OGC API Publish-Subscribe Workflow.
 
 * [pycsw](#pycsw)
 * [ldproxy](#ldproxy)
+* [pygeoapi](#pygeoapi)
 
 ## pycsw
 
@@ -31,3 +32,18 @@ More information can be found in the [documentation](https://docs.pycsw.org/en/l
 PubSub support is implemented as a module to publish feature changes via MQTT.
 
 More information can be found in the [documentation](https://docs.ldproxy.net/services/building-blocks/pubsub.html).
+
+## pygeoapi
+
+[pygeoapi](https://pygeoapi.io) is an OGC API server implementation written in Python.
+
+Part 1 is implemented on any transactions, publishing messages via MQTT, HTTP, or Kafka using the following:
+- autodiscovery as per Requirements Class Discovery
+- message payload as per Requirements Class Message Payloads — CloudEvents (JSON)
+- channels as per Clause 9: Channels (Informative)
+
+Landing page:
+
+* https://demo.pygeoapi.io/master
+
+More information can be found in the [documentation](https://docs.pygeoapi.io/en/latest/pubsub.html).
