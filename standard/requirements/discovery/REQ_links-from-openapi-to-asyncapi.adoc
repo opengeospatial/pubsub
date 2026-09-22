@@ -3,5 +3,5 @@
 ====
 [%metadata]
 identifier:: /req/discovery/links-from-openapi-to-asyncapi
-part:: To link to a Pub/Sub channel with a channel address expression from an OpenAPI document, an ``x-ogc-linkTemplate`` object SHALL structure an OGC API - Records ``uriTemplate`` property to reference the AsyncAPI document (in JSON or YAML) with a URI template.
+part:: To link to a Pub/Sub channel with a channel address expression from an OpenAPI document, an ``x-ogc-linkTemplate`` object SHALL structure an OGC API - Records ``uriTemplate`` property to reference the AsyncAPI document (in JSON or YAML) with a URI template. The URI template SHALL include only path parameters that are defined in the OpenAPI description on the path level.
 ====

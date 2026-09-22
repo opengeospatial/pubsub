@@ -96,11 +96,23 @@ Given OGC APIs utilize OpenAPI to describe a API, an ``x-ogc-link`` can be made 
 [source,json]
 ----
 {
-    "/collections/discovery-metadata/items": {
+    "/collections/{collectionId}/items": {
+        "parameters": [
+            {
+                "name": "collectionId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                },
+                "description": "Identifier of the collection"
+            }
+        ],
         "get": {
             "description": "Discovery metadata records",
             "operationId": "getDiscoveryMetadataItems",
-        ...
+
+            ...
         },
         "x-ogc-linkTemplate": {
             "uriTemplate": "https://example.org/asyncapi.json#/channels/{collectionId}"
